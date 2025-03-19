@@ -1,0 +1,163 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_editing_zbw_blades_or_enw_tools">Editing ZBW Blades or ENW Tools</a></li>
+<li><a href="#_editing_machine_configuration">Editing Machine-Configuration</a></li>
+<li><a href="#_importing_new_tool_data">Importing New Tool Data</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is a wide variety of optional ENW blank-holders, and ZBW blades that you
+may use with your panel bender. In addition, some of the components of the
+panel-bender such as the upper or lower blank-holder, and the folding
+blades may be swapped out with different ones.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/toolingoverview.png" alt="toolingoverview" width="450">
+</div>
+<div class="title">Figure 1. Tooling overview</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Tool Inventory</strong> window
+in JFY Bend is used to configure these attachments and tools for the
+panel-bender.</p>
+</div>
+<div class="paragraph">
+<p>To access the Tool Inventory window, open a part, and switch it to panel bending
+mode. An <strong>inventory</strong> button appears in the command bar, and clicking on this
+opens up the Tool Inventory window.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/tool1.png" alt="Tool Inventory" width="700">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In order to view all tool types in the inventory, open {app name} in <strong>admin</strong> mode.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_zbw_blades_or_enw_tools">Editing ZBW Blades or ENW Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use the <strong>Type</strong> selector to pick the ENW tools or ZBW blades that are available for
+JFY Bend to use. When editing these tools, clicking on a tool toggles between
+being available or unavailable. In addition, you can rearrange these tools
+in a diferent order (by clicking and dragging a tool to a different
+location). JFY Bend uses this ordering as the tool priority, and tries to use
+these tools in the specified order. For example, in the image above, JFY Bend
+will try to process a part using the ENW110-50 tool before it tries to use
+the ENW110-30 tool.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_machine_configuration">Editing Machine-Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some of these types (like the blank-holder, upper-blade, or lower-blade) do not
+allow multiple-selections. In a sense, these types represent the current
+configuration of the machine, and only one blank-holder may be mounted on
+the machine at one time. When the upper or lower blade is changed on the
+machine, for example, this section is used to inform JFY Bend of the change,
+so it can tool up parts and do collision checks appropriately.</p>
+</div>
+<div class="paragraph">
+<p>Depending on your JFY Bend installation, it is likely that these sections (like
+blank-holder, upper-blade or lower-blade) may not be accessible for
+editing except by a Trumpf technician. The image below shows the typical
+settings available for editing (on the left), and the additional settings
+that may be available to Trumpf technicians (on the right).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/tool2.png" alt="Tool Inventory" width="750">
+</div>
+</div>
+<div class="paragraph">
+<p>All these settings are for the currently selected panel-bender (the one being
+used for the current part). If you have multiple panel benders, you can
+vary these settings individually for each one.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_importing_new_tool_data">Importing New Tool Data</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you get new tools from Trumpf, these tools will be accompanied by tool-data files
+(<strong>tdata files</strong>), that are used to inform {app name} about the geometry and
+capabilities of these new tools. You can import these new tdata files into
+{app name} using the <strong>Add New</strong> button. This opens a file selector that lets you
+select one or more tdata files. These data are added to the tool
+catalogue, and can then be selected in the various pages of the Tool
+Inventory window.</p>
+</div>
+<div class="paragraph">
+<p>To import special tool ordered from TRUMPF proceed as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Check that TRUMPF has provided a <strong>TData-Files.zip</strong> and unzip it.</p>
+</li>
+<li>
+<p>Open any program in {app name}.</p>
+</li>
+<li>
+<p>Navigate to <strong>Tool management</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>Inventory</strong> icon <span class="image"><img src="img/inventory.png" alt="inventory" width="20"></span> from the command bar.</p>
+</li>
+<li>
+<p>Under <strong>Type</strong>, select the type of tool you want to create and click on <strong>New</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/tool-inventory.png" alt="tool inventory">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Navigate to the tool you wish to add.</p>
+</li>
+<li>
+<p>Select the <strong>.tdata file</strong> and click <strong>Open</strong> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image021.png" alt="image021" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>The tool is now displayed in your tool database.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/image022.png" alt="image022">
+</div>
+</div>
+<div class="paragraph">
+<p>Check that the quantity of the relevant size corresponds to the tool set you have received.</p>
+</div>
+</div>
+</div>

@@ -1,0 +1,43 @@
+<div class="paragraph">
+<p>{appName} computes<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>
+the press-force required to process each bend, and then uses this
+to check that the punches, dies and adapters used for the bend are not overloaded.
+Typically, tonnages for bend tools are specified as kN/m (kilo-newtons per meter)
+or tons per meter. {appName} computes the linear tonnage required for a bend and
+checks if this limit lies within the tools' limit load. When this is violated,
+errors are displayed:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/die-overload.png" alt="Die Overload" width="381">
+</div>
+</div>
+<div class="paragraph">
+<p>In addition, the total tonnage required for the bend is checked against the
+tonnage the machine can generate, and when the machine is overloaded, an error
+is displayed in the <strong>Ram</strong> row of the bend navigator.</p>
+</div>
+<div class="paragraph">
+<p>The tool-tip generated for a punch or die shows the linear tonnage that the
+tool is capable of handling:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/punch-tonnage.png" alt="Punch Tonnage" width="234">
+</div>
+</div>
+<div class="paragraph">
+<p>The tool-tip for a bend operation shows the overall tonnage that is required
+to complete the bend:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/bend-tonnage.png" alt="Bend Tonnage" width="469">
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. For the same part, you may sometimes notice that the computed tonnage is different when you switch to a different press-brake, even though you may be using similar punches and dies (with the same V-widths, angles and punch tip radii). The difference is because {appName} has a few different <em>force computation</em> algorithms, provided by different press-brake OEMs, and their results are not always exactly in agreement.
+</div>
+</div>

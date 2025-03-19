@@ -1,0 +1,7 @@
+TITLE=JFY Bend Online Help
+OUTDIR=../jfybendbookhtml-en
+LOGO=img1/jfy.jpg,103,34
+COPYRIGHT=Copyright &copy; 2025 by Jiangsu Jinfangyuan CNC Machine Co. All rights reserved.
+
+ATTRIBUTE=appName:JFY Bend
+ATTRIBUTE=bendApp:{appName}

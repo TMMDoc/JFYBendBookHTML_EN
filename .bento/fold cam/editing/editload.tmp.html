@@ -1,0 +1,285 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_7030_front_loading">7030 (Front-Loading)</a>
+<ul class="sectlevel2">
+<li><a href="#_gauging_section">Gauging section</a></li>
+<li><a href="#_handling_section">Handling section</a></li>
+<li><a href="#_fine_position_section">Fine Position section</a></li>
+</ul>
+</li>
+<li><a href="#_7030_kb40_front_rear_loading">7030 + KB40 (Front / Rear Loading)</a></li>
+<li><a href="#_7020_ergo_centering">7020 (Ergo-Centering)</a>
+<ul class="sectlevel2">
+<li><a href="#_ergo_centering_section">Ergo-Centering section</a></li>
+<li><a href="#_handling_section_2">Handling section</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>Loading</strong> operation for an automated panel-bender (like the TBC-7030 or the TBC-7020)
+can be edited by clicking twice on the <em>loading</em> cell in the navigator on the top. This
+is the cell labelled <strong>L</strong>. The first click selects the load operation, and the second click
+brings up the load panel.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/loadstage.png" alt="Loading Cell" width="553">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7030_front_loading">7030 (Front-Loading)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <em>Loading</em> panel for a front-loading 7030 machine looks like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/7030-load.png" alt="Front-Loading on a 7030" width="723">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Centering angle</strong> setting specifies the part orientation during the centering
+operation. Note that this is the side facing into the machine, and is therefore
+exactly opposite to the side actually referencing the front gauges. In this example,
+the side C2 faces into the machine (and the side C1 at +90 degrees is used for gauging).
+This setting displays a list of orientations that are suitable for the initial
+centering.</p>
+</li>
+<li>
+<p>The <strong>Part Pickup</strong> selector lets you choose if the part is picked up using the vacuum
+suction cups or using the rear pliers. (This is displayed only if both choices are
+available. Some parts will be too small to be picked up by the vacuum gripper, and
+some parts will be too large to be picked up by the rear pliers).</p>
+</li>
+<li>
+<p>The <strong>Simulate</strong> slider at the bottom can be used to simulate the different steps of
+the initial centering process.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_gauging_section">Gauging section</h3>
+<div class="paragraph">
+<p>This collapsible section lets you cycle through various gauge placements.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Auto-Place</strong> setting can be used to switch between different gauge placements.
+Depending on the part geometry, there could be multiple locations on the edge of the
+part where various types of corner or notched gauging could be done. Clicking this
+button repeatedly will cycle through all these options. (As you do this, you will
+note the actual gauge positions getting updated in the <em>Fine Position</em> section).</p>
+</li>
+<li>
+<p>The <strong>Slack</strong> setting is used to add an additional gap (in the Z direction) between
+the gauges. It can be used to facilitate gauging in the case of parts that may not
+be trimmed exactly to size.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_handling_section">Handling section</h3>
+<div class="paragraph">
+<p>This section sets up the rotation position and other handling options during the
+centering cycle.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Rotor (Z, X)</strong> settings control the rotor position (position of the rotation center),
+and these are measured relative to the part center in the centering orientation.</p>
+</li>
+<li>
+<p>Click on <strong>Propagate</strong> to use the same rotation center for processing all the sides.
+Typically, JFY Bend will try to optimize the rotation centers to minimize the number of
+double-rotations required. However, if you manually adjust the rotation center using the
+setting above, you could use this to button to try further optimization.</p>
+</li>
+<li>
+<p>The <strong>Speed %</strong> setting controls the rotation speed (as a percentage of the maximum
+possible speed).<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fine_position_section">Fine Position section</h3>
+<div class="paragraph">
+<p>This collapsible section lets you edit the gauge positions manually. Typically this
+should be rarely required - most of the time, the initial selection of gauging position
+is optimal. And in other situations, a few clicks of the <strong>Auto Place</strong> button mentioned
+above should position the gauges correctly. The <strong>Fine Position</strong> settings are only for
+those rare cases or unusual geometry where JFY Bend cannot find any gauging solutions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Left (Z, X)</strong> settings let you control the position of the left gauge. The Z
+position is measured from the center-line, while the X position is measured from
+the edge of the part in the X direction. As you adjust this setting, the gauges
+move, and you may see collisions, or <em>gauge-not-engaged</em> errors.</p>
+</li>
+<li>
+<p>The <strong>Right (Z, X)</strong> settings control the position of the right gauge.</p>
+</li>
+<li>
+<p>The <strong>Trimmed</strong> indication in the display switches between Trimmed, Untrimmed, or
+Diagonal to indicate the type of gauging in effect</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7030_kb40_front_rear_loading">7030 + KB40 (Front / Rear Loading)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For a 7030 equipped with a KB40, there are more options available during the loading:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/7030-kb40-load.png" alt="Loading on 7030+KB40" width="721">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Stack angle</strong> setting to select a particular orientation of the part on the
+KB40 pallet. You can then set up the loading mode (front or back) and the centering
+angle for that particular stack angle. The NC code (XML) generated by JFY Bend has the
+centering settings for each of the various stack angles embedded in it. Depending
+on the actual stack angle, the appropriate setting is used. You can inspect all the
+stack angles that are programmed by pointing at the <strong>Gauging</strong> cell:<br>
+<span class="image"><img src="img/kb40-stacks.png" alt="KB40 Stacks" width="386"></span></p>
+</li>
+<li>
+<p>The <strong>Loading mode</strong> setting is used to select between <em>Back centering</em> and the
+<em>Front centering</em> modes.</p>
+</li>
+<li>
+<p>The <strong>Centering angle</strong> setting is used to select the orientation of the part during
+the initial centering. If the loading mode is set to <em>front centering</em>, then the
+centering angle is the same as the stack angle (since no rotation is done before
+the part is pushed against the front gauges). If the loading mode is set to
+<em>back centering</em>, then the centering angle is one of these:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>stack angle</em> : the part is centered first, and then pulled back and
+rotated to the initial side orientation.</p>
+</li>
+<li>
+<p>The <em>first side angle</em> : the part is rotated to the same orientation as the
+initial side orientation before centering.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <strong>Handling</strong>, <strong>Gauging</strong> and the <strong>Fine Position</strong> sections are similar to the
+corresponding sections from the 7030 (see section above), except that they may
+refer to the positions of the back-gauges or the front-gauges
+(depending on the <em>Loading mode</em> setting).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7020_ergo_centering">7020 (Ergo-Centering)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On the 7020 panel bender, there are no front-gauges. The initial centering happens
+against the rear gauges, and the panel looks like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/7020-ergo.png" alt="7020 Ergonomic Centering" width="706">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Centering Angle</strong> setting is used to select the orientation of the part during
+the initial centering. This can be different from the first-side orientation - in this
+case, the part is centered, then pulled back and rotated before the first side is
+processed.</p>
+</div>
+<div class="sect2">
+<h3 id="_ergo_centering_section">Ergo-Centering section</h3>
+<div class="paragraph">
+<p>This section is used to select if <em>ergonomic centering</em> is enabled, and is then used
+to program ergonomic centering.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the <strong>Ergonomic load</strong> setting is set to <strong>&lt;No&gt;</strong>, then no ergonomic centering happens.
+The part is loaded with the gauges in the center (in processing position). If this
+is set to <strong>Left</strong> or <strong>Right</strong>, then an ergonomic centering cycle is programmed.</p>
+</li>
+<li>
+<p>The <strong>Gripping plier</strong> selects which of the two pliers is used for <em>gripping</em> the part
+and pulling it to the center (the other plier is used for referencing a corner of the
+part). Typically, if the ergonomic centering happens on the left side, the <em>right</em>
+plier is used for gripping, and vice-versa.</p>
+</li>
+<li>
+<p>The <strong>Z-Right</strong> (or <strong>Z-Left</strong>) setting controls the position of this gripping plier.
+As you slide it along the part, the X position of the plier is automatically adjusted
+so it can grip the leading edge of the part.</p>
+</li>
+<li>
+<p>The <strong>Regrip with both</strong> switch can be used to provide more stability during the
+transport of the part to the center of the machine. If this is turned on, then the
+other plier is also used to grip the part edge while it is pulled into the machine.</p>
+</li>
+<li>
+<p>The <strong>Z-Regrip</strong> setting (displayed only if the <em>Regrip with both</em> switch is on),
+sets up the position of the second plier when it is gripping the part.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_handling_section_2">Handling section</h3>
+<div class="paragraph">
+<p>This section is almost similar to the handling section for the 7030 machine.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Grip with</strong> setting is used to select whether the part is gripped with the
+vacuum manipulator (X3) or with the rotary clamps (X2/X4) during the centering cycle.</p>
+</li>
+<li>
+<p>The <strong>Rotor (Z, X)</strong> is the position of the rotary clamp (relative to the part center)
+when the part is held / rotated during the centering cycle. If that side is subsequently
+processed using the rotary clamp (based on the <em>Grip with</em> setting above), this is
+also the position at which the clamp holds the part during the side processing.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <strong>Gauging</strong> and the <strong>Fine Position</strong> settings are similar to the ones used for the
+7030 (see section above), except that they now control the positions of the back-gauges
+rather than the front-gauges.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. The maximum rotation speed is computed based on the rotational inertia of the part.
+</div>
+</div>

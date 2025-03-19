@@ -1,0 +1,282 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_creating_a_tool_list">Creating a Tool List</a></li>
+<li><a href="#_adding_rule_for_a_tool_list">Adding rule for a Tool List</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The terms used in bend tool creation are described below:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">S.No</th>
+<th class="tableblock halign-left valign-top">Term</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool lists</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The
+tool lists to be worked with can be selected here.
+New tool lists can be
+created with the option <strong>New</strong>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The tools can be sorted according to specific criteria here
+(height, name, shape, radius, angle, die width, priority, tool
+management).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tools can be searched using the search bar. Here, for
+example, an alphabetic search can be made for names of tools.</p>
+<p class="tableblock">Additionally, more complex search requests can be made.
+This
+search request finds all tools with UT or EV in the name which also meet
+the following conditions: angle ≤ 30, height ≥ 140, height ≤ 220, radius = 1.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The size of the view of the
+tools can be changed with the slider.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Actions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The following actions can be performed:</p>
+<p class="tableblock">- <kbd>A</kbd> Add catalogue: To add different types of machines.</p>
+<p class="tableblock">- <kbd>B</kbd> New tool list: To create a new collection of tools.</p>
+<p class="tableblock">- <kbd>C</kbd> Clone tool list: To clone the created collection of tools.</p>
+<p class="tableblock">- <kbd>D</kbd> Export tool list: The current tool list can be exported as a
+".btools" file.</p>
+<p class="tableblock">- <kbd>E</kbd> Import tool list: A tool list can be imported as ".btools".</p>
+<p class="tableblock">- <kbd>F</kbd> Import from ARV: A tool
+can be imported from an ARV file, these tools are then custom filed in
+the tool catalog (this will be created if it was not available
+beforehand).</p>
+<p class="tableblock">- <kbd>G</kbd> Import from DXF: A tool can be imported from a DXF file. These
+tools are then custom filed in the tool catalog (this will be created
+if it was not available beforehand).</p>
+<p class="tableblock">- <kbd>H</kbd> Reset tool list: Restores the tool list to its default state.</p>
+<p class="tableblock">- <kbd>I</kbd> Cancel: Closes the "Actions&#8230;&#8203;" window.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows an overview of the selected tool.
+The following actions can be performed:</p>
+<p class="tableblock">- Reset to zero: The total inventory of the selected tool is
+removed from the current tool list.</p>
+<p class="tableblock">-Add one set: Only one set of the selected tool is added to the currrent list.</p>
+<p class="tableblock">-Add length: To add the tool length</p>
+<p class="tableblock">- Add All: The complete inventory of the selected tool is loaded
+in the current tool list. The inventory is defined in the &lt;All tools&gt;
+tool list.</p>
+<p class="tableblock">- Save: To save the applied changes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool inventory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays the inventory of the selected tool.
+Left mouse-click to add a segment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool without inventory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A tool without
+inventory is not included in the current tool list. By clicking on the
+empty field a standard inventory for the tool is added and the tool is
+incorporated into the current tool list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Priority</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Based on the priority given by the user,the tool is selected.</p>
+<p class="tableblock">1 = High priority tool</p>
+<p class="tableblock">5 = Low priority tool</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool display area</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In the tool display
+area, all tools from the selected tool list are displayed. Tools without
+inventory can also be displayed with the checkbox "Include tools without
+inventory".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool filter</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Here, the tools of the current tool list are structured
+according to their type and shape.
+Selecting an element in this structure enables filtering.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Catalog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One of the many tool catalogs
+installed can be selected with this (including TRUMPF, custom, etc.).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filter condition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The filter condition for the current tool list, which is
+automatically used by the auto-tooler. This can be used for a named tool
+list, but not for the special list &lt;All tools&gt;. It is possible to filter
+according to various aspects, including machine, material, sheet
+thickness, etc.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_tool_list">Creating a Tool List</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To create a new tool list click on the <strong>Actions</strong> button and select <strong>New Tool-List</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/NewToolList.png" alt="NewToolList">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Rename the tool list by clicking on the edit <span class="icon"><i class="fa fa-edit"></i></span> icon.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/RenameToolList.png" alt="RenameToolList">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>By  default, the new tool list displays all tools including Punch, Die, Punch Holder and Die Holder but not added to the inventory. Make sure <strong>Include tools not in this collection</strong> checkbox is selected.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/NewCatalog.png" alt="NewCatalog">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>To add a tool, click on the square box above the tool name and <span class="keyseq"><kbd>ctrl</kbd>+<kbd>enter</kbd></span> key to remove a tool.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/NewCatalog1.png" alt="NewCatalog1" width="420"></span> <span class="image"><img src="img/NewCatalog2.png" alt="NewCatalog2" width="420"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>The <strong>Use this when</strong> option allows the user to filter and set rules for a new list depending on various criteria.</p>
+</li>
+<li>
+<p>Click <strong>save</strong> to add this tool list to the <strong>collection</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_rule_for_a_tool_list">Adding rule for a Tool List</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Click the <strong>Filter further</strong> option to apply a rule from different filter criteria available.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Machine</strong> - Refers to the machine used for bending operations.</p>
+</li>
+<li>
+<p><strong>Material</strong> - Denotes the type of substance being bent.</p>
+</li>
+<li>
+<p><strong>Thickness</strong> -  Denote the thickness of the material being bent.</p>
+</li>
+<li>
+<p><strong>Radius</strong> -  Refers to the curvature of the bend.</p>
+</li>
+<li>
+<p><strong>Surface</strong> -  Describe the material’s outer texture or finish.</p>
+</li>
+<li>
+<p><strong>Treatment</strong> - Describe any pre- or post-bending processes applied to the material, such as heat treatment, coating, or galvanization.</p>
+</li>
+<li>
+<p><strong>Film</strong> - Refers to a protective or functional layer applied to the material.</p>
+</li>
+<li>
+<p><strong>Tag</strong> -  Custom label assigned  to categorize, filter, and organize elements for easier identification.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Tool list must have at least one filtering criterion before it can be saved (otherwise this tool list would be used for every part).
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/FilterFurther.png" alt="FilterFurther">
+</div>
+</div>
+<div class="paragraph">
+<p>The image below shows an example criteria applied to create a rule:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When multiple tool lists match a specific tooling requirement, the tool list with the most specific match will be used.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/FilterParameters.png" alt="FilterParameters">
+</div>
+</div>
+</div>
+</div>

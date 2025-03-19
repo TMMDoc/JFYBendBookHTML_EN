@@ -1,0 +1,177 @@
+<div class="paragraph">
+<p>Once a sheet metal bend is tooled using workflow menu, select settings icon and click <strong>Bend Settings</strong> or shortcut key <kbd>A</kbd>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/bendsettings.png" alt="Bend Settings" width="750">
+</div>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Table 1. Basic</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opening angle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The opening angle is displayed here.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Length</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The bend length is displayed here.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press force</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The calculated press force is displayed here.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Table 2. Ram Cycle</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rapid down</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The speed of the beam up to the mute point.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mute point</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">At the mute point, the max speed ("Rapid down") is automatically switched over to the reduced speed ("Clamping"). The mute point is above the top edge of the lower tool. "Mute distance 1"  programmed sheet thickness = distance between the tip of the upper tool and the upper edge of the lower tool.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clamp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The speed of the beam between the mute point and the clamping point.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clamping point correction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adjust the value to compensate for variations in sheet thickness.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Waiting time at the clamping point</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The delay is mostly required by automated machines. During the waiting time, the beam will stop at the clamping point. Adjust the value e.gif a robot&#8217;s gripper reaches around the part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Press</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The speed of the beam between the clamping point and the machine&#8217;s lower dead point (LDP).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hold time at the LDP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The beam will remain at the lower dead point (LDP) during the hold time. Due to the hold time, the material has enough time available during the bend to deform.
+Increase the value e.g when air bending thicker sheets or when coining.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auto-decompression</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Activated (standard): Select the value determined empirically by TRUMPF for the decompression path.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decompression path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">With the decompression path, the tension in the machine&#8217;s frame is released in a controlled fashion after a bend, as it is under maximum tension at the lower dead point (LDP). The decompression path moves the beam upwards at a slow speed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decompression</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speed of the beam along the decompression path (decompression).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opening</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The beam opening is the measure by which the beam moves upward after a bending operation.</p>
+<p class="tableblock">Positive value: Press beam is positioned above the mute point.
+Negative value: Press beam is positioned below the mute point.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rapid up</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speed of the beam after the decompression path (decompression).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Withdrawal direction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Here you select in which direction the back gauge is to be withdrawn.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Withdrawal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Define withdrawal, value by which the gauge finger automatically moves away from the stop edge of the part once the part is clamped between the upper and lower tools (clamping point).</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Table 3. Backgauge</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z1 position (Finger 1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to the calculated position of the gauge finger Z1.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z2 position (Finger 2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to the calculated position of the gauge finger Z2.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X1 position (Finger 1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to the calculated position of the gauge finger X1.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X2 position (Finger 2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to the calculated position of the gauge finger X2.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">R1 position (Finger 1)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to the calculated position of the gauge finger R1.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">R2 position (Finger 2)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to the calculated position of the gauge finger R2.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">Table 4. Axis speeds</caption>
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to backgauge Z1 and Z2 speed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X1 Speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to backgauge X1 speed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X2 Speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to backgauge X2 speed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">R1 Speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to backgauge R1 speed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">R2 Speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corresponds to backgauge R2 speed.</p></td>
+</tr>
+</tbody>
+</table>

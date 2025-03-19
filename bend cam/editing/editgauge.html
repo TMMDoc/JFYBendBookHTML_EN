@@ -1,0 +1,471 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Edit the Back-Gauges</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img1/jfy.jpg" width="103" height="34" /></div>
+        <div><p>JFY Bend Online Help</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../../index.html">Welcome to JFY Core</a></li>
+    <li><button class="tree blank"></button><a href="../../index2.html">Foreword</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../intro/index.html">Introduction</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../intro/install.html">Installing the Software</a></li>
+        <li><button class="tree blank"></button><a href="../../intro/clarity.html">The User Interface</a></li>
+        <li><button class="tree blank"></button><a href="../../intro/workflow.html">Part Workflow</a></li>
+        <li><button class="tree blank"></button><a href="../../intro/database.html">The Machine Database</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="../index.html">Bend CAM</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="../createbendtech.html">Create Bend Solution</a></li>
+        <li><button class="tree blank"></button><a href="../navigator.html">The Bend Navigator</a></li>
+        <li>
+          <button class="tree open"></button>
+          <a href="index.html">Editor Panels</a>
+          <ul>
+            <li><button class="tree blank"></button><a href="editbend.html">Edit a Bend</a></li>
+            <li><button class="tree blank"></button><a href="editmount.html">Edit a Tool Mount</a></li>
+            <li><button class="tree blank"></button><a href="editsetup.html">Edit a Bend Setup</a></li>
+            <li><button class="tree blank"></button><a class="active" href="editgauge.html">Edit the Back-Gauges</a></li>
+            <li><button class="tree blank"></button><a href="editacb.html">Edit Angle Measurement</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../operations/index.html">Bend Operations</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../operations/sequencing.html">Changing the Sequence</a></li>
+            <li><button class="tree blank"></button><a href="../operations/viewsettings.html">View Settings</a></li>
+            <li><button class="tree blank"></button><a href="../operations/recompute.html">Recomputing the Solution</a></li>
+            <li><button class="tree blank"></button><a href="../operations/batchprocess.html">Batch processing</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../advanced/index.html">Advanced Workflow</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../advanced/preparation/index.html">Preparation of Bend Parts</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../advanced/preparation/preparinga2ddrawing.html">Preparing a 2D drawing</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/editingadrawing.html">Editing a Drawing</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/addbendinginformationastexttodxf.html">Add Bending Information as Text to DXF</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/measuringthesidedimension.html">Measuring and changing Outer Dimension</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/preparing3dmodels.html">Preparing 3D models</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/preparinganassembly.html">Preparing an Assembly</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/componentdetection.html">Component Detection</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/formdetection.html">Form Detection</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../advanced/tooling/index.html">Edit Tools</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../advanced/tooling/changingtoolmap.html">Changing Tool Map</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/tooling/toolpriority.html">Tool Priority</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/tooling/creatingatool.html">Creating a Tool</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../advanced/usingbenddeductions.html">Using Bend Deductions</a></li>
+            <li><button class="tree blank"></button><a href="../advanced/miscellaneous.html">Comment Section in Bend Panel</a></li>
+            <li><button class="tree blank"></button><a href="../advanced/tonnage.html">Tools/Machine Tonnage Check</a></li>
+            <li><button class="tree blank"></button><a href="../advanced/addingatoolstation.html">Adding a Tooling station</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../settings/index.html">Settings</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../settings/1 applicationsettings/index.html">Application Settings</a>
+              <ul class="hide">
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="../settings/1 applicationsettings/2 bendcam/index.html">Bend CAM</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="../settings/1 applicationsettings/2 bendcam/bendoutputs.html">Bend Outputs</a></li>
+                    <li><button class="tree blank"></button><a href="../settings/1 applicationsettings/2 bendcam/bendview.html">Bend View</a></li>
+                    <li><button class="tree blank"></button><a href="../settings/1 applicationsettings/2 bendcam/bendcell.html">Bend Cell</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../settings/2 databasesettings/index.html">Database Settings</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/materials.html">Materials</a></li>
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/machines.html">Machines</a></li>
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/bendtools.html">Bend Tools</a></li>
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/benddeductions.html">Bend Deductions</a></li>
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/bendgrippers.html">Bend grippers</a></li>
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/forms-components.html">Forms/Components</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../settings/bendsettings.html">Bend Settings</a></li>
+            <li><button class="tree blank"></button><a href="../settings/machinedefaults.html">Machine Defaults</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../fold cam/index.html">Fold CAM</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../fold cam/switching.html">Create Fold Solution</a></li>
+        <li><button class="tree blank"></button><a href="../../fold cam/machinetypes.html">Fold Machine Types</a></li>
+        <li><button class="tree blank"></button><a href="../../fold cam/foldview.html">The Fold View</a></li>
+        <li><button class="tree blank"></button><a href="../../fold cam/tools.html">Tool Management</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../fold cam/tools/index.html">Tools and Grippers</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/enw.html">ENW Tools</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/bh.html">Upper Blank Holder</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/lbh.html">Lower Blank Holder</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/zbw.html">ZBW Tools</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/bhold.html">Bending Beam</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/ub.html">Upper Bending Tool</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/lb.html">Lower Bending Tool</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/gripper.html">Part Manipulator</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/hemming.html">Hemming Bar</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../fold cam/editing/index.html">Editing Operations</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editbend.html">Editing a Bend-Op</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editside.html">Editing a Side/Section</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editseq.html">Changing the Sequence</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editbh.html">Editing the Blank-holders</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editgauge.html">Editing the Gauging</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editblade.html">Editing the Blades</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editload.html">Editing the Loading</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editunload.html">Editing the Unloading</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../fold cam/settings/index.html">Settings</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../fold cam/settings/application.html">Application Settings</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/settings/machine.html">Machine Defaults</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/settings/part.html">Part Settings</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../fold cam/troubleshooting/index.html">Troubleshooting Fold Errors</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario1.html">Changing the Bending Sequence </a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario2.html">Collisions with the Blank Holder</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario3.html">Collisions and Flange Length</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario4.html">Collisions with the Blank Holder</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario5.html">Collisions with the Blank Holder</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario6.html">Skipped Bends</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario8.html">Required Flange Length</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../report/index.html">Reports</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../report/designer.html">Report Designer</a></li>
+        <li><button class="tree blank"></button><a href="../../report/fields.html">Fields, Pictures and Tables</a></li>
+        <li><button class="tree blank"></button><a href="../../report/bands.html">Bands (sub-reports)</a></li>
+        <li><button class="tree blank"></button><a href="../../report/labels.html">Labels, Bitmaps and Shapes</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../appendix/index.html">Appendix</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../appendix/3dformats.html">Supported 3D Formats</a></li>
+        <li><button class="tree blank"></button><a href="../../appendix/bseparatordxf.html">Separator Sheet DXF</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="../index.html">Bend CAM</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="index.html">Editor Panels</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="editgauge.html">Edit the Back-Gauges</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Edit the Back-Gauges</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The back-gauge positions for each bend can be adjusted by just clicking
+on the back-gauge - this opens the <strong>Gauge</strong> panel, which is shown alongside.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_gauge_panel">The Gauge Panel</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/edit-gauge.png" alt="Gauge Panel" width="134">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Gauge</strong> selector to select the gauge you want to edit (you can also
+just click on the gauge, and the panel is displayed to edit that gauge.</p>
+</li>
+<li>
+<p>The <strong>Z</strong>, <strong>X</strong> and <strong>R</strong> inputs are used to adjust the position of the gauges
+in three dimensions. For most press-brakes, the axes are as indicated
+in the image below:<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup><br>
+<span class="image"><img src="img/gauge-direction.png" alt="Gauge direction" width="204"></span></p>
+</li>
+<li>
+<p>The <strong>Surface</strong> selector is used to engage a different <em>surface</em> of the
+gauging finger to the part. The set of surfaces available depends on the
+machine, and not all surfaces may be applicable for all bends ({appName} will
+inform you when a particular surface cannot be used). The image below
+shows different surfaces being used:<br>
+<span class="image"><img src="img/edit-gauge2.png" alt="Gauge Panel-2" width="736"></span></p>
+</li>
+<li>
+<p>The <strong>Retract</strong> setting is used to set the gauge-retraction distance before
+bending. For some bends, the gauge has to be retracted (in the +X direction)
+by some distance after the part is <em>pinched</em> by the punch, but before it is
+bent (to avoid a collision). This setting is used to control the retraction
+distance. When you are editing this, {appName} actually retracts the gauge by
+the specified amount as a preview, so you can judge whether the retraction
+may be sufficient.</p>
+</li>
+<li>
+<p>Use the <strong>Auto-Place</strong> button to ask {appName} to compute a position automatically
+for the specified gauge. In general, {appName} will have multiple gauging possibilities,
+and repeatedly clicking the Auto-Place button will cycle through those
+possibilities. To revert back to the <em>default</em>, close the gauge panel, click
+on the gauge again, and then click Auto-Place - the first position then
+selected is the default (that would also be the result of the original
+auto-sequencing and tooling).</p>
+</li>
+<li>
+<p>Use the <strong>Flip Part</strong> button to insert the other side of the part into the
+machine and compute gauging afresh. This is similar to the Flip Part
+button in the <a href="editbend.html">bend panel</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_advanced">Advanced</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here are some more advanced operations with the gauges:</p>
+</div>
+<div class="sect2">
+<h3 id="_editing_gauging_for_multiple_bends">Editing Gauging for Multiple Bends</h3>
+<div class="paragraph">
+<p>It is possible to edit the gauge positions for multiple bends at the same time.
+To do this, first select multiple bends by <span class="keyseq"><kbd>Shift</kbd>+<kbd>Click</kbd></span> on the bend numbers in
+the bend navigator. Then, click on a gauge. The image alongside shows the gauge
+positions for bends 1, 2 and 4 being edited together:<br>
+<span class="image right"><img src="img/edit-gauge3.png" alt="Gauge Panel-3" width="247"></span></p>
+</div>
+<div class="paragraph">
+<p>In this example, the bends all use the same Z position for the gauge, and
+editing this position will adjust the Z position for all the gauges. The X and
+R position values are blank, since they are different for each bend. You can,
+however, type in an X or R value and it will be applied for all bends.</p>
+</div>
+<div class="paragraph">
+<p>In general, you will rarely need to use this functionality. The gauge panel
+is aware of the limitations of a particular press-brake and will enforce all
+constraints required. For example, the R positions of the two gauges must be
+the same for some machines (they do not have independent R1 and R2 axes) - {appName}
+will ensure that when you edit the R position for one gauge, the other one is
+also adjusted immediately to track.</p>
+</div>
+<div class="paragraph">
+<p>For some machines with <em>2-axes</em> gauging systems, the Z positions of the gauges
+are set manually, and are not typically changing from bend to bend (since that
+would involve the operator having to manually adjust the gauges after each bend).
+For such machines, when Z position is set for one bend, it is set to the same
+for all bends. The collision status, gauge-engaged status etc are computed for
+all bends immediately, so it is very easy to find common Z1 and Z2 positions
+that may be acceptable for all bends.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dragging_gauges">Dragging Gauges</h3>
+<div class="paragraph">
+<p>Though the exact gauging positions can be set by typing in Z, X and R values,
+it is often more simple to position the gauges just by dragging them into
+contact with the part.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click once to select the gauge you want to drag.</p>
+</li>
+<li>
+<p>Click on the selected gauge and drag to position it. Depending on the
+<em>viewpoint</em>, the gauge is dragged along either a horizontal or vertical plane.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Typically, you start with the gauge away from the part, and drag it towards the
+part until it touches. You can continue dragging further (pushing the gauge <em>into</em> the part),
+and a <em>wireframe</em> will continue moving, but the actual gauge stops when it touches the part.<br>
+<span class="image"><img src="img/drag-gauge.png" alt="Drag Gauge" width="768"></span></p>
+</div>
+<div class="paragraph">
+<p>The image above shows this in operation - we start dragging the gauge towards
+the sheet in the direction indicated by the arrow. As soon as the gauge touches
+the sheet, it stops, and just a wireframe representation continues moving (to
+show you where you are attempting to drag the gauge). This makes it easy to
+position the gauge so it is just touching the part without any gaps, and without
+any collisions.</p>
+</div>
+<div class="paragraph">
+<p>In this image above, we are looking at the gauge from a viewpoint that is close to
+<em>top down</em>. So, the gauge moves in the XZ plane, and the R value of the gauge is
+kept constant. If you rotate the view to a more <em>end on</em> view, the gauge will
+move in the XR plane, and the Z value will be constant.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_clamp_snaps_while_dragging">Clamp-Snaps while Dragging</h3>
+<div class="paragraph">
+<p>By dragging the gauge, it is easy to precisely position the gauges when
+you are using one of the <strong>Stop</strong> type surfaces. When you are using one of the
+<strong>Clamp</strong> type surfaces, this is more difficult, since you have to engage both
+surfaces of a clamping finger against the part.</p>
+</div>
+<div class="paragraph">
+<p>{appName} makes this easy by providing automatic <em>snaps</em> when the gauge is close
+to a possible <em>clamping position</em>. To use this mechanism, first rotate the view
+so you are seeing the gauges from top-down. Then, drag the gauges so the corner
+you want to clamp fits near the aperture of the fingers:<br>
+<span class="image"><img src="img/drag-gauge2.png" alt="Drag Gauge-2" width="768"></span></p>
+</div>
+<div class="paragraph">
+<p>The image above shows a clamping operation in progress. As we drag the gauges
+close to a clamping position, they <em>snap</em> into position at the Clamp 1 position
+(see image above, center). Dragging further, the gauges then snap into the
+Clamp 2 position (see image above, right). Note that the R value of the gauge
+is automatically adjusted up or down as we move to these different clamping snaps.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. Depending on the press-brake in use, the names of these axes may be different.
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_the_gauge_panel">The Gauge Panel</a>
+    </li>
+    <li level="1">
+      <a href="#_advanced">Advanced</a>
+    </li>
+    <li level="2">
+      <a href="#_editing_gauging_for_multiple_bends">Editing Gauging for Multiple Bends</a>
+    </li>
+    <li level="2">
+      <a href="#_dragging_gauges">Dragging Gauges</a>
+    </li>
+    <li level="2">
+      <a href="#_clamp_snaps_while_dragging">Clamp-Snaps while Dragging</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="editsetup.html">Edit a Bend Setup</a></span>
+  <span class="next"><a href="editacb.html">Edit Angle Measurement</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Jiangsu Jinfangyuan CNC Machine Co. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

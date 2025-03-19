@@ -1,0 +1,58 @@
+<div class="paragraph">
+<p>Custom <em>separator sheets</em> can be imported from DXF or GEO files. These sheets are
+typically placed between layers of a part being deposited on a bending cell, and
+<a href="../BCell/Workflow/PartDeposit/Adding-Parts-Stacks/Separator.html">this page</a> explains
+how to set up and use a separator sheet in a deposit. The DXF should be drawn in mm,
+and should contain:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A single outer contour (closed polyline) defining the outer shape of the separator.</p>
+</li>
+<li>
+<p>Zero or more inner contours representing the <em>holes</em> or cutouts in the separator
+sheet.</p>
+</li>
+<li>
+<p>A few text entries of the form <code>Key = Value</code> that define some essential properties
+of the separator sheet.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/sepsheet-dxf.png" alt="Separator Sheet" width="619">
+</div>
+</div>
+<div class="paragraph">
+<p>The image above shows a typical separator-sheet DXF. The exact position of the outer
+contour is not critical - JFY Bend will automatically set the reference position of the
+separator sheet at the center of the drawing.</p>
+</div>
+<div class="paragraph">
+<p>These keys are used to define the important <em>metadata</em> about the separator sheet:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Name</strong> setting defines the name of the sheet (as it appears in the JFY Bend user
+interface). If there is already a sheet with the same name in the separator-sheet
+database, it will be overwritten.</p>
+</li>
+<li>
+<p>The <strong>Thickness</strong> is the thickness of each sheet in mm. This is an important value,
+since it is used to set up the correct spacing of parts on the deposit stack.</p>
+</li>
+<li>
+<p>The <strong>Weight</strong> setting, in kg, is used to check that the gripper is not overloaded
+when trying to pick up the separator sheet.</p>
+</li>
+<li>
+<p>The <strong>Magnetic</strong> setting indicates if the separator sheet is made of a ferrous material,
+and is used to check whether it can be picked up by a magnetic gripper. This can
+be omitted, and defaults to 0 (non-magnetic), which is typical for most separator
+sheet.</p>
+</li>
+</ul>
+</div>

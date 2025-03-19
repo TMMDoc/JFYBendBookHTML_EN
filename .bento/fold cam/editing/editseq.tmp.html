@@ -1,0 +1,60 @@
+<div class="paragraph">
+<p>There are two ways to change the sequence in which sides are processed. One way
+is to use the <strong>Edit Sequence</strong> button in the <a href="EditSide.html">Side Panel</a> as explained above.
+The other simpler method is to simply drag the section to a new location
+in the Fold Navigator.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on a fold number in the Fold Navigator  and drag it to change the
+sequence. The side you click on defines the exact set of bends that
+get dragged. Let&#8217;s consider a part like the one below, which has two
+short sides and two long sides. The sequence in this case is L1 L2 C1
+C2:<br>
+<span class="image"><img src="img/seq1.png" alt="Seq1" width="485"></span></p>
+</li>
+<li>
+<p>If you click on one of the bends in side C1 or side L1, then the entire <em>short side</em>
+or the entire set of <em>long sides</em> are being dragged. So, if you
+click on the bends 1 or 2 (part of L1) or the bends 5 or 6 (part of
+C1), then you are dragging 4 bends. Here is an image below showing a
+drag initiated from bend 5; we are now dragging sides C1 and C2 (note
+how bends 5, 6, 7 and 8 are slightly grayed out and move along with
+the mouse). We can now drop this before the sides L1 and L2, thus changing the sequence to
+C1 C2 L1 L2.<br>
+<span class="image"><img src="img/seq2.png" alt="Seq2" width="395"></span></p>
+</li>
+<li>
+<p>If we start dragging the sides L2 or C2, then only that side gets dragged, and
+we could use this to shuffle the two sides C1 and C2 or the sides L2
+and L2. We could even use this to change the sequence to something
+like L1 C1 C2 L2 (which will usually not work, but it may be useful in
+some special cases). Here is an example where we are dragging the side
+L2 (note how bends 3 and 4 are slightly grayed out, and move along
+with the mouse):<br>
+<span class="image"><img src="img/seq3.png" alt="Seq3" width="377"></span></p>
+</li>
+<li>
+<p>The dragging is designed to allow the common case of swapping the long and
+short sides easily (CCLL &lt;&#8594; LLCC), while still allowing changing the
+order between individual sides like C1 and C2. When the sequence is
+changed, JFY Bend computes updated tooling, blades, gauging etc. It is
+likely that the change in sequence may now require ZBW blades, ENW
+tools to be deployed (or it may cause these to be no longer required).
+All these changes are automatically computed.</p>
+</li>
+<li>
+<p>Sometimes, the sequence you select in this way may not be feasible. For
+example, consider the part below, with 6 bends. The bends 1 and 2 are
+composite bends made of multiple collinear segments. If we process
+bends 4 or 6 first, we cannot then process bends 1 or 2, since the
+individual segments will no longer be collinear.<br>
+<span class="image"><img src="img/seq4.png" alt="Seq4" width="533"></span><br>
+If you try to alter the sequence in such a way that you create such an
+<em>impossible</em> sequence, JFY Bend will not change the sequence, but will instead
+display an error:<br>
+<span class="image"><img src="img/seq5.png" alt="Seq5" width="378"></span></p>
+</li>
+</ul>
+</div>

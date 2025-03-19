@@ -1,0 +1,564 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Recomputing the Solution</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img1/jfy.jpg" width="103" height="34" /></div>
+        <div><p>JFY Bend Online Help</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../../index.html">Welcome to JFY Core</a></li>
+    <li><button class="tree blank"></button><a href="../../index2.html">Foreword</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../intro/index.html">Introduction</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../intro/install.html">Installing the Software</a></li>
+        <li><button class="tree blank"></button><a href="../../intro/clarity.html">The User Interface</a></li>
+        <li><button class="tree blank"></button><a href="../../intro/workflow.html">Part Workflow</a></li>
+        <li><button class="tree blank"></button><a href="../../intro/database.html">The Machine Database</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="../index.html">Bend CAM</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="../createbendtech.html">Create Bend Solution</a></li>
+        <li><button class="tree blank"></button><a href="../navigator.html">The Bend Navigator</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../editing/index.html">Editor Panels</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../editing/editbend.html">Edit a Bend</a></li>
+            <li><button class="tree blank"></button><a href="../editing/editmount.html">Edit a Tool Mount</a></li>
+            <li><button class="tree blank"></button><a href="../editing/editsetup.html">Edit a Bend Setup</a></li>
+            <li><button class="tree blank"></button><a href="../editing/editgauge.html">Edit the Back-Gauges</a></li>
+            <li><button class="tree blank"></button><a href="../editing/editacb.html">Edit Angle Measurement</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree open"></button>
+          <a href="index.html">Bend Operations</a>
+          <ul>
+            <li><button class="tree blank"></button><a href="sequencing.html">Changing the Sequence</a></li>
+            <li><button class="tree blank"></button><a href="viewsettings.html">View Settings</a></li>
+            <li><button class="tree blank"></button><a class="active" href="recompute.html">Recomputing the Solution</a></li>
+            <li><button class="tree blank"></button><a href="batchprocess.html">Batch processing</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../advanced/index.html">Advanced Workflow</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../advanced/preparation/index.html">Preparation of Bend Parts</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../advanced/preparation/preparinga2ddrawing.html">Preparing a 2D drawing</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/editingadrawing.html">Editing a Drawing</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/addbendinginformationastexttodxf.html">Add Bending Information as Text to DXF</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/measuringthesidedimension.html">Measuring and changing Outer Dimension</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/preparing3dmodels.html">Preparing 3D models</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/preparinganassembly.html">Preparing an Assembly</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/componentdetection.html">Component Detection</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/preparation/formdetection.html">Form Detection</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../advanced/tooling/index.html">Edit Tools</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../advanced/tooling/changingtoolmap.html">Changing Tool Map</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/tooling/toolpriority.html">Tool Priority</a></li>
+                <li><button class="tree blank"></button><a href="../advanced/tooling/creatingatool.html">Creating a Tool</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../advanced/usingbenddeductions.html">Using Bend Deductions</a></li>
+            <li><button class="tree blank"></button><a href="../advanced/miscellaneous.html">Comment Section in Bend Panel</a></li>
+            <li><button class="tree blank"></button><a href="../advanced/tonnage.html">Tools/Machine Tonnage Check</a></li>
+            <li><button class="tree blank"></button><a href="../advanced/addingatoolstation.html">Adding a Tooling station</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../settings/index.html">Settings</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../settings/1 applicationsettings/index.html">Application Settings</a>
+              <ul class="hide">
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="../settings/1 applicationsettings/2 bendcam/index.html">Bend CAM</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="../settings/1 applicationsettings/2 bendcam/bendoutputs.html">Bend Outputs</a></li>
+                    <li><button class="tree blank"></button><a href="../settings/1 applicationsettings/2 bendcam/bendview.html">Bend View</a></li>
+                    <li><button class="tree blank"></button><a href="../settings/1 applicationsettings/2 bendcam/bendcell.html">Bend Cell</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../settings/2 databasesettings/index.html">Database Settings</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/materials.html">Materials</a></li>
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/machines.html">Machines</a></li>
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/bendtools.html">Bend Tools</a></li>
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/benddeductions.html">Bend Deductions</a></li>
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/bendgrippers.html">Bend grippers</a></li>
+                <li><button class="tree blank"></button><a href="../settings/2 databasesettings/forms-components.html">Forms/Components</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../settings/bendsettings.html">Bend Settings</a></li>
+            <li><button class="tree blank"></button><a href="../settings/machinedefaults.html">Machine Defaults</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../fold cam/index.html">Fold CAM</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../fold cam/switching.html">Create Fold Solution</a></li>
+        <li><button class="tree blank"></button><a href="../../fold cam/machinetypes.html">Fold Machine Types</a></li>
+        <li><button class="tree blank"></button><a href="../../fold cam/foldview.html">The Fold View</a></li>
+        <li><button class="tree blank"></button><a href="../../fold cam/tools.html">Tool Management</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../fold cam/tools/index.html">Tools and Grippers</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/enw.html">ENW Tools</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/bh.html">Upper Blank Holder</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/lbh.html">Lower Blank Holder</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/zbw.html">ZBW Tools</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/bhold.html">Bending Beam</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/ub.html">Upper Bending Tool</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/lb.html">Lower Bending Tool</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/gripper.html">Part Manipulator</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/tools/hemming.html">Hemming Bar</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../fold cam/editing/index.html">Editing Operations</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editbend.html">Editing a Bend-Op</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editside.html">Editing a Side/Section</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editseq.html">Changing the Sequence</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editbh.html">Editing the Blank-holders</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editgauge.html">Editing the Gauging</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editblade.html">Editing the Blades</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editload.html">Editing the Loading</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/editing/editunload.html">Editing the Unloading</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../fold cam/settings/index.html">Settings</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../fold cam/settings/application.html">Application Settings</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/settings/machine.html">Machine Defaults</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/settings/part.html">Part Settings</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../fold cam/troubleshooting/index.html">Troubleshooting Fold Errors</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario1.html">Changing the Bending Sequence </a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario2.html">Collisions with the Blank Holder</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario3.html">Collisions and Flange Length</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario4.html">Collisions with the Blank Holder</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario5.html">Collisions with the Blank Holder</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario6.html">Skipped Bends</a></li>
+            <li><button class="tree blank"></button><a href="../../fold cam/troubleshooting/scenario8.html">Required Flange Length</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../report/index.html">Reports</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../report/designer.html">Report Designer</a></li>
+        <li><button class="tree blank"></button><a href="../../report/fields.html">Fields, Pictures and Tables</a></li>
+        <li><button class="tree blank"></button><a href="../../report/bands.html">Bands (sub-reports)</a></li>
+        <li><button class="tree blank"></button><a href="../../report/labels.html">Labels, Bitmaps and Shapes</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../appendix/index.html">Appendix</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../appendix/3dformats.html">Supported 3D Formats</a></li>
+        <li><button class="tree blank"></button><a href="../../appendix/bseparatordxf.html">Separator Sheet DXF</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="../index.html">Bend CAM</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="index.html">Bend Operations</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="recompute.html">Recomputing the Solution</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Recomputing the Solution</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you press <kbd>B</kbd>, or use the workflow panel to compute a solution,
+{appName} calculates a bend solution using a set of default settings and parameters. You
+can do a re-calculation of this solution using different settings by clicking
+on the <strong>Recompute</strong> <span class="image"><img src="img/gear.png" alt="Recompute" width="20"></span> menu from the command bar. Sometimes, this is also useful to
+complete the computation after you have interactively edited some tooling, or the sequence.<br>
+For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can change the sequence, and ask {appName} to compute new tooling stations while
+keeping the sequence unchanged.</p>
+</li>
+<li>
+<p>You could change the tooling stations, and ask {appName} to compute a new sequence,
+or to align the part to the newly created stations.</p>
+</li>
+<li>
+<p>You can try the tooling operation with a different set of tools, or try
+using an already-created Setup.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_recompute_dialog">The Recompute Dialog</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/recompute.png" alt="Recompute" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Recompute</strong> dialog looks like the image alongside.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overrides">Overrides</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section contains some switches you can use to over-ride the default behavior of
+{appName}.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Turn on the <strong>Don&#8217;t change sequence</strong> switch to force {appName} to compute a new
+solution without changing the sequence. Different tooling stations, gauging positions
+or part insertion directions will be tried by {appName}, while holding the sequence unchanged.</p>
+</li>
+<li>
+<p>If the <strong>No Angle Measurement</strong> switch is turned on, {appName} computes a solution
+that performs no angle measurements, and will not use any gauging sensors (ACB tools)</p>
+</li>
+<li>
+<p>The <strong>Ignore tools from GEO/DXF files</strong> tells {appName} to ignore the tooling hints
+that are often found in GEO files, and sometimes in DXF file.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setups">Setups</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section sets the strategy for tooling setups; by default, {appName} will compute the Setup
+from scratch, but you can use these settings change this behavior.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Compute new Setup</strong> is the default behavior - {appName} will compute a setup using
+all the tools it is allowed to (see the Tools section below).</p>
+</li>
+<li>
+<p><strong>Keep existing Setup</strong> tells {appName} that no Setup changes should be made; it tries
+to process all the bends using the current setup for the part. if some bends have collisions,
+or have insufficient tool length for processing, those errors remain uncorrected, and can be
+viewed after the recompute process.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="img/setup-from-file.png" alt="Setup from file" width="245">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you select <strong>Use Setup from File</strong>, you are prompted to pick a bend setup file (bsetup).
+The <strong>Setup</strong> loaded from this file is then used for computation; that setup is not modified, nor
+are any additional stations created. Setups you have recently loaded from file are displayed
+in the selector that appears below this section, and you can then click the <strong>+</strong> button
+near that selector to pick a different setup file.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="img/setup-other-part.png" alt="Setup other part" width="245">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Use Setup from another Part</strong> option is available only if there are some other
+parts currently open, and they have been tooled up for the same press-brake. In this case,
+you can ask {appName} to use the same setup as one of these other parts; a selector appears
+to let you choose the part you want.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tools">Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you choose the <strong>Compute new Setup</strong> option in the section above, you can use the <strong>Tools</strong>
+section to pick the list of bend-tools that may be used to compute the new setup. If you choose
+one of the other options for the Setup, this section is not available.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Preferred tools for Machine</strong> is the default option. For each press-brake, you can choose
+a set of tools<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> as the <em>preferred tools</em>,
+and {appName} will use those tools when tooling up the part.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>
+(If you have not actually set up the preferred tools for a machine, {appName} uses all the tools in the inventory as the preferred tool-set for the machine).</p>
+</li>
+<li>
+<p>If you choose <strong>Tools in Inventory</strong>, {appName} will use all the tools that are available in
+the installation&#8217;s inventory. If you have not actually set up the inventory of tools, {appName} uses
+all the tools in the Catalog as your inventory.</p>
+</li>
+<li>
+<p>The <strong>All Tools in Catalog</strong> is the broadest selection of tools; {appName} will use every tool
+available in the manufacturer&#8217;s tool catalog to attempting a solution. While this may mean the solution
+may not be actually feasible for production (using the inventory you have available), it is useful for
+a speculative exploration of what tools would be required to produce a particularly complex part.
+(In addition, this mode also tells {appName} to assume an infinite inventory of pieces - that is,
+the optimum tooling is produced assuming you have an infinite number of pieces of each length).</p>
+</li>
+</ul>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="img/tools-from-file.png" alt="Tools from File" width="240">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can create custom tool-sets and store them in tool-list files (btools). These files
+can then be used to tool up the part, when you select the <strong>Use tool-set from File</strong> option.
+When you pick this option, you are prompted for a tool-list file, and tool-list files you have
+used recently are displayed for easy selection. You can click on the <strong>+</strong> sign near this list
+to pick a new tool list.</p>
+</li>
+<li>
+<p>For the most direct control over the punches and dies, you can select the <strong>Specific Tools</strong>
+option, and then pick the exact punch and die you want to use.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/tools-specific.png" alt="Specific tools" width="240">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sequence_priority">Sequence Priority</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When sequencing the bends in a part, there are a few potentially conflicting requirements. For example, should {appName}
+try to minimize the <em>number of part rotations</em>, or should it try to minimize the bends where the <em>part&#8217;s
+center-of-gravity lies inside the machine</em>? <br>
+It is quite likely that each operator may have a different
+set of priority rules, and also possible that different parts may require different priority settings.
+{appName} therefore allows you to do a recomputation with a different ordering of priorities, using the
+<strong>Sequence Priority</strong> section of this dialog.</p>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="img/sequence-priority.png" alt="Sequence Priority" width="277">
+</div>
+</div>
+<div class="paragraph">
+<p>Use the <span class="image"><img src="img/circle-up.png" alt="up" width="16"></span> and <span class="image"><img src="img/circle-down.png" alt="down" width="16"></span> arrow buttons on the right to shuffle the rules; items near the
+top are higher in priority. You can turn some of these priority items off completely; this tells {appName} not to
+consider this as a factor when deciding the sequence. (Sometimes, turning off some of these can yield a sequence that
+uses few tool stations).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Avoid collisions during overbend</strong>: To achieve angle accuracy, most bends will need to be <em>overbent</em>
+slightly to compensate for springback. This sequence rule tells {appName} to do bends in such an order that overbending
+is possible. For example, in the part below, we should do the bend 1 first and bend 2 next; the other order would
+block overbending.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/overbending.png" alt="Overbending" width="242">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Don&#8217;t use low-priority tools</strong>: Tells {appName} to avoid using low-priority tools, or tools that are not in
+the preferred list, as far as possible.</p>
+</li>
+<li>
+<p><strong>Avoid gauging on open angles</strong>: Gauging positions should ideally be in the same plane as the bend axis,
+and there should not be any already-processed bends between the bend line and the gauging point. Here is an example
+of a poor gauging that this rule tries to avoid:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="img/open-gauging.png" alt="Open Gauging" width="248">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Avoid part tipping backwards</strong>: Especially with heavy parts, it is useful to avoid situations where the
+center-of-gravity of the part lies behind the tool line. This rule tries to minimize such situations.<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup></p>
+</li>
+<li>
+<p><strong>Minimize part flips</strong>: Part flips are when the part has to be overturned (successive bends are in different up/down directions)</p>
+</li>
+<li>
+<p><strong>Minimize part rotations</strong>: A part rotation is when a part is turned left or right in the horizontal plane; this is
+considered to be easier for the operator than a part flip; the default ordering of these last two rules tries to
+favor part rotations over part flips, where possible.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. To do this, use the <strong>inventory</strong> button in the command bar, and choose <strong>Preferred Tools</strong> from the menu that pops up.
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. {appName} will try to use only the preferred tools for the part, but if there are collisions or other problems that cannot be resolved, it will start using other tools from the available inventory.
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. {appName} uses some discretion about the part weight and how far back the center-of-gravity is behind the tool-line to consider this as a problem. Technically, it considers a part to tip backwards if there is a tipping moment of 0.15 Nm (Newton meters) backwards.
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_the_recompute_dialog">The Recompute Dialog</a>
+    </li>
+    <li level="1">
+      <a href="#_overrides">Overrides</a>
+    </li>
+    <li level="1">
+      <a href="#_setups">Setups</a>
+    </li>
+    <li level="1">
+      <a href="#_tools">Tools</a>
+    </li>
+    <li level="1">
+      <a href="#_sequence_priority">Sequence Priority</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="viewsettings.html">View Settings</a></span>
+  <span class="next"><a href="batchprocess.html">Batch processing</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Jiangsu Jinfangyuan CNC Machine Co. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

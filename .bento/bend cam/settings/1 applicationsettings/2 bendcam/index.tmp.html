@@ -1,0 +1,202 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_back_gauges">Back-Gauges</a></li>
+<li><a href="#_angle_measurement">Angle Measurement</a>
+<ul class="sectlevel2">
+<li><a href="#_angle_measurement_systems">Angle Measurement Systems</a></li>
+</ul>
+</li>
+<li><a href="#_geometry_adaptation_strategy">Geometry Adaptation Strategy</a></li>
+<li><a href="#_other_settings">Other Settings</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/bendcam.png" alt="bendcam">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_back_gauges">Back-Gauges</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Min.thickness to always pull-back (mm)</strong> - This setting allows you to enter a value in mm of automatic withdrawal of the back gauges when the sheet thickness entered is reached.</p>
+</div>
+<div class="paragraph">
+<p><strong>Clamping Strategy</strong> - This is used to set how the back gauges are to stop on the workpiece.</p>
+</div>
+<div class="paragraph">
+<p>The following selection options are available:</p>
+</div>
+<div class="paragraph">
+<p><strong>Default</strong> - The back gauges stop for each bend in the manner considered best by the software.</p>
+</div>
+<div class="paragraph">
+<p><strong>Stop + Stop</strong> - The straight surfaces of both back gauges stop against the workpiece.</p>
+</div>
+<div class="paragraph">
+<p><strong>Clamp + Stop</strong> - One back gauge clamps the workpiece and the other back gauge stops it with its straight surface.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_angle_measurement">Angle Measurement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Angle measurement is for Trumpf machines only.
+ Using the angle measuring systems from the Automatically Controlled Bending family means even the first part in a series turns out perfect.
+ Sensors determine the actual angle together with the spring back and guide the ram to achieve the desired angle.
+ In this section, settings for ACB on the machine can be entered.</p>
+</div>
+<div class="sect2">
+<h3 id="_angle_measurement_systems">Angle Measurement Systems</h3>
+<div class="paragraph">
+<p><strong>Laser</strong> - Tick this option if the machine has an ACB Laser.
+ ACB Laser is where a laser projects a line onto the sheet and a camera detects the angle.</p>
+</div>
+<div class="paragraph">
+<p><strong>Wireless</strong> - Tick this option if the machine uses ACB Wireless.
+ ACB Wireless is sensor disks integrated into the upper tool.</p>
+</div>
+<div class="paragraph">
+<p><strong>Classic</strong> - Tick this option if the machine uses ACB Classic.</p>
+</div>
+<div class="paragraph">
+<p><strong>Min. Bend length to use 2 angle measures</strong> - This option is the minimum length of the fold to take two measurements to ensure the correct angle during folding.
+ This can be between 50 &gt; 4000 millimetres.</p>
+</div>
+<div class="paragraph">
+<p><strong>Min. bend length to use 3 angle measures</strong> -This option is the minimum length of the fold to take three measurements to ensure the correct angle during folding.
+ This can be between 50 &gt; 4000 millimetres.</p>
+</div>
+<div class="paragraph">
+<p><strong>ACB laser sensor park position</strong> - This is the resting position of the Laser Sensor.</p>
+</div>
+<div class="paragraph">
+<p><strong>ACB quality limit</strong> - <strong>warning</strong> - This is the limit which will generate a warning when measuring the part such as a fudge factor.
+ If it is in the specific range, then it will file a warning.</p>
+</div>
+<div class="paragraph">
+<p><strong>ACB quality limit</strong> - <strong>error</strong> - This is the limit which will generate an error when measuring the part such as a fudge factor.
+ It will file an error if it is in the specific range.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_geometry_adaptation_strategy">Geometry Adaptation Strategy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If a 2D or 3D file is edited in the software, the bend radii and the bend deduction are checked.
+ Various processing strategies are executed depending on what strategies were selected for modifying the workpiece in the Easy Programming settings.
+ If the decision was set to interactive, then the Adapt Geometry dialogue will be shown.</p>
+</div>
+<div class="paragraph">
+<p><strong>When starting with a 2D flat:</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Ask each time</strong> - When navigating from a 2D part to bending, using this setting will automatically display the Adapt Geometry dialogue. This will give options of retaining the flat size, retaining the 3D dimensions or not changing anything, making this feature very interactive and user lead.</p>
+</div>
+<div class="paragraph">
+<p><strong>Keep 3D dimensions</strong> - This option changes the unfolding, which then must be saved manually.
+ This strategy is used if the blank has not yet been cut.</p>
+</div>
+<div class="paragraph">
+<p><strong>Keep 2D dimensions</strong> - This option will mean the bend radius and the bend deduction are adjusted to the existing unfolding; the bending line remains in the same place. This will change the side length of the part. The unfolding is not changed. This strategy is used if the blank has already been cut to size.</p>
+</div>
+<div class="paragraph">
+<p><strong>No adjustments</strong> - Using this option will mean bend radius and bend deduction remain unchanged.
+ The part is displayed with the correct dimensions in 3D, but the shown bend radii do not correspond to the actual bend radii. The dimension of each workpiece bend can change.</p>
+</div>
+<div class="paragraph">
+<p><strong>When starting with a 3D model:</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Ask each time</strong> - When navigating from a 3D part to bending, using this setting will automatically display the Adapt Geometry dialogue.
+ This will give options of retaining the flat size, retaining the 3D dimensions or not changing anything, making this feature very interactive and user lead.</p>
+</div>
+<div class="paragraph">
+<p><strong>Keep 3D dimensions</strong> - This option changes the unfolding, which then must be saved manually.
+ This strategy is used if the blank has not yet been cut.</p>
+</div>
+<div class="paragraph">
+<p><strong>Keep 2D dimensions</strong> - This option will mean the bend radius and the bend deduction are adjusted to the existing unfolding; the bending line remains in the same place.
+ This will change the side length of the part.
+ This strategy is used if the blank has already been cut to size.</p>
+</div>
+<div class="paragraph">
+<p><strong>No adjustments</strong> - Using this option will mean bend radius and bend deduction remain unchanged.
+ The part is displayed with the correct dimensions in 3D, but the shown bend radii do not correspond to the actual bend radii.
+ The dimension of each workpiece bend can change.</p>
+</div>
+<div class="paragraph">
+<p><strong>Bend deduction calculation</strong> - This option makes it possible to force the K-Factor method to be used.
+ This setting can be set in the Application Defaults or can be adjusted for each machine individually.</p>
+</div>
+<div class="paragraph">
+<p>Note: For non-Trumpf machines, K-Factors are used always; the Trumpf bend computations are only available for Trumpf press brakes.</p>
+</div>
+<div class="paragraph">
+<p><strong>BG-left variant</strong> - Depending on the variant BG used, the NC code will be modified to represent this.</p>
+</div>
+<div class="paragraph">
+<p><strong>BG-right variant</strong> - Depending on the variant BG used, the NC code will be modified to represent this.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_settings">Other Settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hemming pre-bend angle</strong> - This option can edit the hem pre-bend angle between 10° &gt; 60°.
+ The default is 40° since that is the recommended hemming pre-bend angle for most manufacturers.
+ It is set to 30° for all the Trumpf machines, in all the various editions.</p>
+</div>
+<div class="paragraph">
+<p><strong>Bend-guard mode override</strong> - Setting this to auto-compute (the default), Bend will compute a bend-guard mode for each bend. However, you can force the bend-guard mode to one of the options for it to just use that one, regardless of whether it is appropriate or not.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can also override this setting for each machine, by setting it up in Machine Defaults, instead of Application Settings.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Machine table position</strong> - This setting has 3 options for the table position:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Removed</p>
+</li>
+<li>
+<p>Down</p>
+</li>
+<li>
+<p>Up</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Tool inventory check</strong> - Enabling this option will show tool segments which may be needed for the workpiece to be bent.
+ Insufficient inventory markers will be displayed.</p>
+</div>
+<div class="paragraph">
+<p><strong>Avoid tool overload if possible</strong> - Turning this option on will ensure a tool overload is avoided.
+ Even if a tool with a higher priority would work on the part, a lower-priority tool will be used instead to avoid overload issues.</p>
+</div>
+<div class="paragraph">
+<p><strong>Ignore tool hints from GEO/DXF files</strong> - Enabling this option will ignore any information found on a DXF/GEO file regarding which tooling is to be used.</p>
+</div>
+</div>
+</div>

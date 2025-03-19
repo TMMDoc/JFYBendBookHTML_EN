@@ -1,0 +1,153 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_panel_bending">Panel-Bending</a>
+<ul class="sectlevel2">
+<li><a href="#_geometry_adaption_strategy">Geometry Adaption Strategy</a></li>
+<li><a href="#_machine_options">Machine Options</a></li>
+</ul>
+</li>
+<li><a href="#_defaults">Defaults</a>
+<ul class="sectlevel2">
+<li><a href="#_back_gauge_settings">Back-gauge Settings</a></li>
+<li><a href="#_re_center_after_hemming">Re-center after hemming</a></li>
+</ul>
+</li>
+<li><a href="#_zwb_carriers">ZWB-Carriers</a>
+<ul class="sectlevel2">
+<li><a href="#_options">Options</a></li>
+<li><a href="#_top_leftright_bottom_leftright">Top Left/Right &amp; Bottom Left/Right</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Part settings are highly specific to a sheet metal part which is being fold.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_panel_bending">Panel-Bending</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/part-settings.png" alt="part settings">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_geometry_adaption_strategy">Geometry Adaption Strategy</h3>
+<div class="paragraph">
+<p>If a 2D or 3D file is edited in the software, the bend radii and the bend deduction are checked. Various processing strategies are executed depending on what strategies were selected for modifying the workpiece in the Easy Programming settings. If the decision was set to interactive, then the Adapt Geometry dialogue will be shown.</p>
+</div>
+<div class="paragraph">
+<p>When starting with a 2D flat:</p>
+</div>
+<div class="paragraph">
+<p><strong>Ask each time</strong> - When navigating from a 2D part to bending, using this setting will automatically display the Adapt Geometry dialogue. This will give options of retaining the flat size, retaining the 3D dimensions or not changing anything, making this feature very interactive and user lead.</p>
+</div>
+<div class="paragraph">
+<p><strong>Keep 3D dimensions</strong> - This option changes the unfolding, which then must be saved manually. This strategy is used if the blank has not yet been cut.</p>
+</div>
+<div class="paragraph">
+<p><strong>Keep 2D dimensions</strong> - This option will mean the bend radius and the bend deduction are adjusted to the existing unfolding; the bending line remains in the same place. This will change the side length of the part. The unfolding is not changed. This strategy is used if the blank has already been cut to size.</p>
+</div>
+<div class="paragraph">
+<p><strong>No adjustments</strong> - Using this option will mean bend radius and bend deduction remain unchanged. The part is displayed with the correct dimensions in 3D, but the shown bend radii do not correspond to the actual bend radii. The dimension of each workpiece bend can change.</p>
+</div>
+<div class="paragraph">
+<p>When starting with a 3D model:</p>
+</div>
+<div class="paragraph">
+<p><strong>Ask each time</strong> - When navigating from a 3D part to bending, using this setting will automatically display the Adapt Geometry dialogue. This will give options of retaining the flat size, retaining the 3D dimensions or not changing anything, making this feature very interactive and user lead.</p>
+</div>
+<div class="paragraph">
+<p><strong>Keep 3D dimensions</strong> - This option changes the unfolding, which then must be saved manually. This strategy is used if the blank has not yet been cut.</p>
+</div>
+<div class="paragraph">
+<p><strong>Keep 2D dimensions</strong> - This option will mean the bend radius and the bend deduction are adjusted to the existing unfolding; the bending line remains in the same place. This will change the side length of the part. This strategy is used if the blank has already been cut to size.</p>
+</div>
+<div class="paragraph">
+<p><strong>No adjustments</strong> - Using this option will mean bend radius and bend deduction remain unchanged. The part is displayed with the correct dimensions in 3D, but the shown bend radii do not correspond to the actual bend radii. The dimension of each workpiece bend can change.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_machine_options">Machine Options</h3>
+<div class="paragraph">
+<p><strong>Modular central vacuum (loading head)</strong> -</p>
+</div>
+<div class="paragraph">
+<p><strong>KB44 part-flipper installed</strong> - Select this check, if a turning station (KB44) is installed in your system.</p>
+</div>
+<div class="paragraph">
+<p><strong>Robot loader/unloader interface</strong> -</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_defaults">Defaults</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/partsettings-defaults.png" alt="partsettings defaults">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_back_gauge_settings">Back-gauge Settings</h3>
+<div class="paragraph">
+<p><strong>BG Z-Slack &amp; FG Z-Slack</strong> - The default is set to 0.2. The last set value is remembered by Fold after the closing/relaunching of the program.</p>
+</div>
+<div class="paragraph">
+<p><strong>FG Preferred Strategy</strong> - By default, this is set to <strong>Notch (Trimmed)</strong> for all machines (to keep the same default behavior as earlier builds of Fold). Still, for any machines configured for Center Cell usage, you must change the machine default to <strong>Corner (Untrimmed)</strong>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_re_center_after_hemming">Re-center after hemming</h3>
+<div class="paragraph">
+<p><strong>Minimum sheet thickness to re-center</strong> - Minimum sheet thickness to recenter the gauges.</p>
+</div>
+<div class="paragraph">
+<p><strong>Minimum hem length to re-center</strong> - Minimum hem length to recenter the gauges.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zwb_carriers">ZWB-Carriers</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/zwb-carriers.png" alt="zwb carriers">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_options">Options</h3>
+<div class="paragraph">
+<p><strong>Lower ACB sensor installed</strong> - Enable this if the machine has a lower ACB sensor</p>
+</div>
+<div class="paragraph">
+<p><strong>Upper ACB sensor installed</strong> - Enable this if the machine has an upper ACB sensor</p>
+</div>
+<div class="paragraph">
+<p><strong>ACB Laser check after each N pieces</strong> -</p>
+</div>
+<div class="paragraph">
+<p><strong>Try to use FZ38 for every side</strong> - The gauges are used for every side if a valid gauging position can be computed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_top_leftright_bottom_leftright">Top Left/Right &amp; Bottom Left/Right</h3>
+<div class="paragraph">
+<p><strong>Top Left/Right carrier installed</strong> - Enable this if a Top Left/Right carrier is installed.</p>
+</div>
+<div class="paragraph">
+<p><strong>Bottom Left/Right carrier installed</strong> - Enable this if a Bottom Left/Right carrier is installed.</p>
+</div>
+<div class="paragraph">
+<p><strong>Mounting position</strong> - Use this to enter the mounting position of the carrier.</p>
+</div>
+</div>
+</div>
+</div>

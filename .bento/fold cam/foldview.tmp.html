@@ -1,0 +1,385 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_the_fold_navigator">The Fold Navigator</a></li>
+<li><a href="#_simulation_controls">Simulation controls</a></li>
+<li><a href="#_fold_navigator_expanded_view">Fold navigator: expanded view</a>
+<ul class="sectlevel2">
+<li><a href="#_status_icons">Status Icons</a></li>
+<li><a href="#_the_flange_row">The <strong>Flange</strong> row</a></li>
+<li><a href="#_the_gauging_row">The <strong>Gauging</strong> row</a></li>
+<li><a href="#_the_blank_holder_row">The <strong>Blank-holder</strong> row</a></li>
+<li><a href="#_the_blade_row">The <strong>Blade</strong> row</a></li>
+<li><a href="#_the_part_handling_row">The <strong>Part handling</strong> row</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you switch to the Fold CAM mode, the workspace displays the <em>folding view</em>.
+This shows a 3D image of the panel-bender with the workpiece, and it looks
+like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/view1.png" alt="Fold View" width="490">
+</div>
+</div>
+<div class="paragraph">
+<p>The panel bender is a large machine with a table that is typically longer than 3
+meters. Displaying the entire machine would dwarf the workpiece and make
+it difficult to visualize the folding process. Thus, the folding view
+displays an <em>abbreviated view</em> of the machine. Various elements like the
+folding blades and lower blank holders are displayed only to the lengths
+required to cover the <em>region of interest</em>. Only the pieces of the upper
+blank-holders that are actually used for processing are displayed. Only
+some spars of the support table and some of the part manipulators are
+displayed. This abbreviated view makes it easier to follow the actual
+processing.</p>
+</div>
+<div class="paragraph">
+<p><span class="image right"><img src="img/view2.png" alt="C-Frame" width="235"></span></p>
+</div>
+<div class="paragraph">
+<p>The <strong>C-Frame</strong> on which the blades are mounted is not usually displayed in the 3D
+view, since it would obstruct most of the view of the folding operations.
+However, when you rotate the 3D view to align it to an end-on orientation,
+the C-Frame is displayed as an outline (see image alongside). This makes
+it easy to see how the part geometry fits in relation with the C-Frame.
+When you rotate the 3D view into a different orientation, the C-frame is
+hidden.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_fold_navigator">The Fold Navigator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you are in the <em>folding view</em>, the <strong>Fold Navigator</strong> panel appears along the top
+edge of the JFY Bend window. This navigator provides a quick way to navigate
+through various bend operations, and also an instant view into various
+status-checks for every bend. It provides controls to view or stop the
+folding simulation. Here is an example of how the fold navigator looks:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/view3.png" alt="Navigator" width="550">
+</div>
+</div>
+<div class="paragraph">
+<p>The navigator displays different colors for bends that have some warnings or
+errors. The current bend is displayed with an outlined box, and the thick
+dark lines between some bends represent side boundaries (where the
+operator has to rotate the part around to continue processing).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_simulation_controls">Simulation controls</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you move the mouse near the fold navigator, <strong>simulation controls</strong> appear.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/view4.png" alt="Controls" width="550">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>slider</strong> can be used to move the current bend through various phases of the
+folding operation (feed part to bending position, clamp with
+blank-holder, move folding blade, etc). As the slider is moved, the
+tool-tip displays the current phase of folding, and various parts of
+the machine move in the simulation. If there are any collisions, those
+parts are colored red to clearly highlight the collision.</p>
+</li>
+<li>
+<p>The <strong>play controls</strong> near the left can be used to start the simulation, stop it,
+or rewind to the beginning. (<strong>Tip</strong>: You can also press <kbd>Space</kbd> to
+start or stop playing the fold simulation).</p>
+</li>
+<li>
+<p>The play one button can be used to play just one bend; use this repeatedly to
+view the simulation of all the bends. (<strong>Tip</strong>: you can press
+<span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Space</kbd></span> to play just one bend).</p>
+</li>
+<li>
+<p>The downward facing chevron near the middle can be used to expand the fold
+navigator, displaying more detailed information about the errors and
+warnings for various bends. (<strong>Tip</strong>: you can also press <kbd>Z</kbd> to
+expand/collapse the fold navigator display).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fold_navigator_expanded_view">Fold navigator: expanded view</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you open the fold navigator by clicking the open button, or by pressing the
+<kbd>Z</kbd> key, this is how it looks:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/view5.png" alt="Navigator Open" width="700">
+</div>
+</div>
+<div class="paragraph">
+<p>For each bend, the navigator now displays a set of status icons. Each colored
+icon represents an error or a warning. Moving the mouse over the colored
+cell displays some more information about what the error or warning is (as
+you can see in the picture above).</p>
+</div>
+<div class="paragraph">
+<p>Clicking on an cell that displays an error positions the simulation so that the
+error is immediately obvious. For example, clicking on a cell that
+displays a <strong>blade-crash</strong> error moves the simulation to the stage of the
+simulation where the blade crashes with the workpiece.</p>
+</div>
+<div class="sect2">
+<h3 id="_status_icons">Status Icons</h3>
+<div class="paragraph">
+<p>There are several different status icons displayed in different rows of the Fold
+Navigator. The sections below explain the meanings of these icons. Note that you can
+always get more information about what an icon means by just moving the mouse over
+the icon.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_flange_row">The <strong>Flange</strong> row</h3>
+<div class="paragraph">
+<p>The Flange row of the fold navigator displays information about intra-part
+collisions (one flange of the model colliding with another). JFY Bend will try
+to avoid this where possible by altering the sequence. These are the icons
+you may see in the Flange row:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Icon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/correct.png" alt="correct" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No error, status OK</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/explosion.png" alt="explosion" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A flange-flange collision happens during the bending</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/skipped-bend.png" alt="skipped bend" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This bend has been skipped (no processing for this bend)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_gauging_row">The <strong>Gauging</strong> row</h3>
+<div class="paragraph">
+<p>The <em>Gauging</em> row of the fold navigator displays the gauging status. Since gauging
+is only used for the first bend in a side, all the other bends in a side
+will display a hollow circle icon (indicating that this bend requires no
+gauging operation).</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Icon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/correct.png" alt="correct" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No error, gauging correctly computed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/explosion.png" alt="explosion" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The back-gauge collides with the part during gauging</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/exclaim.png" alt="exclaim" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: Gauging could not be computed for this side</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/missing.png" alt="missing" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information</strong>: This is not the first bend in this side;
+  it does not require gauging</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_blank_holder_row">The <strong>Blank-holder</strong> row</h3>
+<div class="paragraph">
+<p>This row of the fold navigator displays status information about the
+blank-holder. These are the possible errors or warning icons you may see
+in this column. Some icons are used both for errors or warnings, and the
+distinction between the two is made based on the background color of the
+cell (yellow for warnings, orange-red for errors).</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Icon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/correct.png" alt="correct" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No error - blank holder is correctly computed, and
+  has no collisions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/explosion.png" alt="explosion" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The part collides with the blank-holder<br>
+  <strong>Warning</strong>: The part collides with the blank-holder during over-bending</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/span-short.png" alt="span short" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The blank-holder span is too short (there is more
+  than about 10mm of overhang of the bend-line beyond the blank-holder)<br>
+  <strong>Warning</strong>: The blank-holder span is slightly short (there is between 5 to 10 mm
+  of overhang of the bend-line beyond the blank-holder)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/enw-tool.png" alt="enw tool" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information</strong>: This bend uses an ENW
+  tool (moving the mouse over the cell provides more details)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_blade_row">The <strong>Blade</strong> row</h3>
+<div class="paragraph">
+<p>This row provide information about the folding blade used for this bend. The
+list below shows the possible icons you may see in this column:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Icon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/correct.png" alt="correct" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No error - the folding blade is correctly
+  computed, and has no collisions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/explosion.png" alt="explosion" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The part collides with the folding blade</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/span-short.png" alt="span short" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The blade length span is too short
+  (there is more than about 10mm of overhang of the bend-line beyond the blade).
+  This happens only when using a ZBW blade.<br>
+  <strong>Warning</strong>: The blade length is slightly short (there is between 5 to 10 mm of overhang
+  of the bend-line beyond the blade).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/airgap.png" alt="airgap" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Warning</strong>: A non-standard air-gap is being used to avoid
+  a blade collision</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/overtravel.png" alt="overtravel" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: ZBW carrier overtravel beyond axis limits</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/overload.png" alt="overload" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: Overload - the required bending force is
+  too high (the air-gap may need to be increased)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_part_handling_row">The <strong>Part handling</strong> row</h3>
+<div class="paragraph">
+<p>This row displays information about the status of part-handling using the vacuum
+grippers or magnetic grippers. These are the icons that could be displayed
+here:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>Icon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Meaning</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/correct.png" alt="correct" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No problems noted with the part handling</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/explosion.png" alt="explosion" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: The part collides with the support table
+  (for example, there is a downward flange that would protrude down into the support table)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/front-grip.png" alt="front grip" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information</strong>: The part is gripped with the
+  front-face of the gripper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/bottom-grip.png" alt="bottom grip" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information</strong>: The part is gripped with the
+  bottom-face of the gripper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/weak-grip.png" alt="weak grip" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Warning</strong>: The gripper may have only a marginal
+  overlap with the part</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/invalid-grip.png" alt="invalid grip" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Error</strong>: No gripping could be computed - there was no
+  surface of the part that was suitable to position the gripper on.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/flip-vertical.png" alt="flip vertical" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Warning</strong>: The part needs to be flipped
+  over by the operator at the start of this side</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="../img/icons/hand.png" alt="hand" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The part needs to be manually extracted at the end of this
+  side (the automatic extraction by the gripper is not possible because of the
+  part fouling with the blank-holder)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>As you make changes in the blank-holder, blades, gripper or back-gauge configurations, the
+fold navigator is immediately updated with the new status. This immediate feedback makes it very
+easy to experiment with different configurations without having to issue a <strong>recompute</strong> command
+each time.</p>
+</div>
+</div>
+</div>
+</div>

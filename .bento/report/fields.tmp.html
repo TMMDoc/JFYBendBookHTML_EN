@@ -1,0 +1,155 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_adding_a_field">Adding a Field</a></li>
+<li><a href="#_editing_a_label">Editing a Label</a></li>
+<li><a href="#_inserting_a_picture">Inserting a Picture</a></li>
+<li><a href="#_inserting_a_table">Inserting a Table</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Clicking on the data sources opens them and display additional levels of clickable
+buttons. These can be used to add <em>fields</em>, <em>pictures</em> and <em>tables</em> to the report.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_a_field">Adding a Field</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A field is a simple numeric or text display from the report. For example, by clicking
+on <strong>Part &gt; Info &gt; Name</strong>, you can insert a field in the report that displays the
+Part&#8217;s material:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/insert-field.png" alt="Insert Field" width="636">
+</div>
+</div>
+<div class="paragraph">
+<p>When you do this, JFY Bend will actually add <em>two</em> items into the report - a <strong>Field</strong>
+displaying the value, and a <strong>Label</strong> to the left of that field. You can edit the
+settings for the label, or for the field, by just clicking on it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_a_label">Editing a Label</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you click on the label that just got added, you will see a panel that allows
+you to edit various settings for that label. The label also gets highlighted and
+<em>sizing handles</em> are added around the label, allowing you to resize it by dragging
+any of them. You can also click right on the label and drag it around to reposition
+it. When you are dragging to move or resize an item, various <em>snap indicators</em>
+are automatically displayed to make it easier to align this label precisely with
+other items already on the report.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/label-edit1.png" alt="Edit Label" width="492">
+</div>
+</div>
+<div class="paragraph">
+<p>The editing panel for the label (and for most other report items) contains a
+large number of settings to tune every aspect of the visual display. You can
+see these by opening the various expandable groups:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/label-edit2.png" alt="Edit Label" width="717">
+</div>
+</div>
+<div class="paragraph">
+<p>The image above right shows a <em>color picker</em> in use to set the text color for
+the label.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inserting_a_picture">Inserting a Picture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <strong>picture</strong> in a report is indicated by a <em>camera</em> icon (rather than the <em>pencil</em>
+icon used for simple fields). For example, by clicking Part &gt; Model &gt; Picture,
+you can insert a picture of the 3D model of the part:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/insert-picture.png" alt="Insert Picture" width="641">
+</div>
+</div>
+<div class="paragraph">
+<p>The image above shows a picture inserted and then being edited by clicking on it.
+The panel for the picture shows some settings used to control the image. The
+exact settings may change, depending on the actual picture that was inserted.
+In this case, the <strong>DPI</strong> setting is used to control the rendering resolution of
+the picture (higher values will look nicer, but will cause the final report size
+to become larger). The <strong>No 3D PDF</strong> setting is used to disable generation of <em>3D PDF</em>
+files.footnote[JFY Bend can render some of its 3D images as embedded <strong>3D PDF</strong> images;
+these can be zoomed, rotated or panned using some PDF viewers. However, these are
+not widely supported on all PDF viewers, and some of them may display these as
+blank boxes.].</p>
+</div>
+<div class="paragraph">
+<p>If you insert a picture of a 2D drawing (flat), the picture options are different,
+as seen in the image below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/picture2.png" alt="Picture 2" width="653">
+</div>
+</div>
+<div class="paragraph">
+<p>[Picture 2](img/picture2.png)</p>
+</div>
+<div class="paragraph">
+<p>The settings here control the line width used for outlines, and for dimensions.
+There are settings to display the bend sequence numbers, and to control whether
+the closed outline of the part is <em>filled</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inserting_a_table">Inserting a Table</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can insert a <strong>table</strong> into a report, by choosing one of the items that displays
+a <em>table</em> icon. For example, if you the Part &gt; Bend &gt; Bends table is used to display
+some information about all the bend operations in a part:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/table-1.png" alt="Table" width="799">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Pick Columns</strong> section is used to select the columns that are displayed in the
+table (from among all the columns available for this tabular data). You can edit more
+attributes of each column by clicking on the <strong>Column</strong> navigation link at the bottom
+of the table&#8217;s panel:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/table2.png" alt="To Columns" width="144">
+</div>
+</div>
+<div class="paragraph">
+<p>This brings up the <strong>Column editor</strong>, where the attributes of the Column can be edited, as
+seen below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/table3.png" alt="Columns" width="789">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Title</strong> field is used to set the displayed title for the column, while the <strong>Expression</strong>
+field is the internal JFY Bend data that is displayed in this column. You can use the <strong>Shift</strong>
+buttons to shift this column left or right in the ordering, and use the <strong>Insert</strong> and
+<strong>Delete</strong> buttons to insert new columns, or to delete the selected column.</p>
+</div>
+</div>
+</div>

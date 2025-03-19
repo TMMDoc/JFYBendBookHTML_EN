@@ -1,0 +1,134 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_switching_to_bend_cam">Switching to Bend CAM</a></li>
+<li><a href="#_further_operations">Further Operations</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can create <em>Bend Technology Data</em> for a sheet-metal part using the Bend module. This is
+also called <em>tooling up the part for bending</em>. Let us assume you have already
+<a href="../Intro/Database.html">installed a machine</a>, and that you have configured the
+<a href="Settings/2 DatabaseSettings/BendTools.html">tool inventory</a>, and that you have
+imported a <a href="../CAD/Index.html">CAD part</a> (2D or 3D):</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/partimport.png" alt="2D Part" width="793">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_switching_to_bend_cam">Switching to Bend CAM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now, the part can be tooled up for bending by just pressing the <kbd>B</kbd> key. The part is tooled
+up with the <em>default</em> bending machine, which is the press-brake you most recently used.
+A tooling sequence, bend setup, gauging positions are all computed, and you should see a result
+like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/tooleduppart.png" alt="Tooled-up Part" width="850">
+</div>
+</div>
+<div class="paragraph">
+<p>If there are no errors, the NC code (and possibly the setup-sheet) for the part are also generated,
+and saved into the output folder that is set up for this machine. Here is a section from a typical
+part-setup sheet<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>
+(also known as a <em>bend report</em>).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/bend-report.png" alt="Bend Report" width="441">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+See also the the <a href="../Intro/Workflow.html">Workflow</a> panel, which can be accessed
+by pressing the <kbd>W</kbd> key. This provides more control over creating bend technology data, and
+options for routing the part through laser CAM, nesting etc.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_further_operations">Further Operations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is a quick summary of some of the operations you can do once a part has been tooled
+up for bending. The following pages of this manual provide more detail about each of these
+operations.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you click the <kbd>Spacebar</kbd>, a bending simulation starts. You can also use the
+simulation controls on the Bend Navigator to start, stop or rewind the simulation:<br>
+<span class="image"><img src="img/playsimulation.png" alt="Simulation Controls" width="266"></span></p>
+</li>
+<li>
+<p>If there are any warnings or errors, they show up in the
+<a href="Navigator.html">Bend Navigator</a>, and you can view those and solve them
+by clicking on the corresponding cells:<br>
+<span class="image"><img src="img/die-span.png" alt="Die Span" width="317"></span></p>
+</li>
+<li>
+<p>You can <a href="Editing/Index.html">edit</a> the bend tooling
+(punches and dies), the gauging setup, or the angle measurement setup by just clicking
+directly on that object in the simulation view:<br>
+<span class="image"><img src="img/edit-die.png" alt="Edit Die" width="326"></span></p>
+</li>
+<li>
+<p>You can change the machine by clicking on the machine name in the tab below the part,
+and selecting a different machine:<br>
+<span class="image"><img src="img/changemachine.png" alt="Change Machine" width="598"></span></p>
+</li>
+<li>
+<p>Click on the <strong>settings</strong> <span class="image"><img src="img/settings.png" alt="Settings" width="16"></span> icon on the toolbar along the left
+to edit additional <a href="Settings/Index.html">settings</a> for
+each bend (or to edit the default settings used for this bending machine, or for the entire
+JFY Bend application).</p>
+</li>
+<li>
+<p>Click on the <strong>display</strong> <span class="image"><img src="img/camera.png" alt="Display" width="16"></span> icon on the left toolbar to edit the
+view of the machine - you can turn the display of additional components like the die rail,
+the bending beam, the back-gauge support system on or off. You can also turn various
+components translucent.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When a bend solution is created, if there are no errors, the part NC code is generated. You
+can control this behavior (whether the NC code is generated automatically) from the
+<strong>Bend Outputs</strong> page of the Machine Default settings. You can also use the same page to
+control if a <em>setup sheet</em> is automatically generated whenever NC code is generated.
+If code has been generated, the <strong>nc-code</strong> button in the left toolbar is grayed out:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/codegen.png" alt="NC-Code" width="374">
+</div>
+</div>
+<div class="paragraph">
+<p>As you make any changes to the part, this button becomes enabled again, and you can
+re-generate the NC code by clicking on this icon again (or by pressing the <kbd>C</kbd> key).</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. You can use the <a href="../Report/Index.html">Report Editor</a> to customize this setup sheet
+</div>
+</div>

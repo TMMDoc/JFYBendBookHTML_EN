@@ -1,0 +1,55 @@
+<div class="paragraph">
+<p>A table is useful for some types of repeated data. However, sometimes, we may need to display
+not just some text or numeric values in columns but may need a more elaborate display for
+each element in the table (for example, we may need a picture, or even a sub-table). For
+such situations, it is more useful to create a <strong>Band</strong> (this is sometimes called a
+<strong>sub-report</strong>). When you click on some data source that could be represented as either
+a table, or as a band, JFY Bend will ask you if you want to insert a Band or a Table:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/askband.png" alt="Ask Band" width="556">
+</div>
+</div>
+<div class="paragraph">
+<p>[Ask Band](img/askband.png)</p>
+</div>
+<div class="paragraph">
+<p>If you choose to insert a Band, an empty band is inserted (the shaded area shown below), and
+the set of all the possible fields, pictures and tables that could be added to the band are
+shown on the right.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/band1.png" alt="Empty Band" width="799">
+</div>
+</div>
+<div class="paragraph">
+<p>You can now compose the data in the band by adding the fields, tables, and pictures from the
+right. In addition to these, you can also add labels, static bitmaps or shapes (like divider
+lines) by picking from the <strong>Sys</strong> data source. In this example, we have created a band for the
+Part &gt; Bend &gt; Setup &gt; Mounts data, so each band is going to display fields, images and tables
+related to one bend mount. After adding some elements into the band, the band may finally
+look like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/band2.png" alt="Composed Band" width="726">
+</div>
+</div>
+<div class="paragraph">
+<p>We composed this band by picking some fields (position, length, flipped etc). We also
+added the <strong>Name</strong> field at the top and changed it to use a larger font. Then, we added
+a picture (the tool cross-section) and a table (the set of segments in this mount).
+As we add these elements, the band displays live data for all of these, but only for
+the first mount in the setup.</p>
+</div>
+<div class="paragraph">
+<p>Later, when the report is actually printed, the entire band (with fields, pictures
+ and tables) is repeated for each mount in the report. Here is a rendered example:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/band3.png" alt="Rendered Band" width="690">
+</div>
+</div>

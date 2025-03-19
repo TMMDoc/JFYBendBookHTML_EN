@@ -1,0 +1,108 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_getting_started">Getting started</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A sheet metal <em>flat</em> can be bent to its final shape using a press-brake. Here are some of
+the tasks the <strong>Bend</strong> module of JFY Bend does, when it is being used to program these machines:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Compute a feasible and optimal <strong>bending sequence</strong> that avoids collisions, and
+minimizes part rotations and flips.</p>
+</li>
+<li>
+<p>Compose bend <strong>tooling stations</strong> from the available inventory of bend tools, using punches,
+dies, adapters and extenders as needed.</p>
+</li>
+<li>
+<p>Compute <strong>gauging locations</strong> where the back-gauges can be positioned to align the part for
+bending.</p>
+</li>
+<li>
+<p>Configure special equipment like <strong>angle measurement</strong> or <strong>bending support aids</strong> that the
+press-brake may be equipped with.</p>
+</li>
+<li>
+<p>Generate <strong>NC Code</strong> that can be transmitted to the press-brake for processing.</p>
+</li>
+<li>
+<p>Generate reports (such as <strong>Setup sheets</strong>) for the bending process.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition, JFY Bend also has a <a href="../Fold/Index.html">Fold</a> module that supports
+panel benders, and a <a href="../BCell/Index.html">Robotic Bend</a> module that supports robotic
+press brakes (brakes where a robot is used to do the part-handling).</p>
+</div>
+<div class="paragraph">
+<p>JFY Bend incorporates algorithms and heuristics to compute the bending solution automatically,
+and in most cases little or no intervention should be required. However, JFY Bend also provides
+a rich set of tools and operations to interactively modify the bending sequence, tooling setups,
+gauging positions and every parameter of the bending process.</p>
+</div>
+<div class="paragraph">
+<p>As these edits are made, various checks (including a full range of collision
+and feasibility checks) are performed in real time, and you can always view the results of your
+edits as you work, without having to request for a <em>recompute</em>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started">Getting started</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here are some resources to get you started with {appName}:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All modules of JFY Bend share a user-interaction model called the <strong>Clarity</strong> interface.
+When starting with JFY Bend, it would be useful to get a quick overview of the
+<a href="../Intro/Clarity.html">Clarity interface</a>.</p>
+</li>
+<li>
+<p>You can install bend machines from the <a href="../Intro/Database.html">Machine Database</a>, and can
+<em>configure</em> them to match the actual machines available on your shopfloor.</p>
+</li>
+<li>
+<p>You can use the <a href="Settings/2 DatabaseSettings/BendTools.html">Bend Tools Database</a> to
+install <em>tool catalogues</em>, and to configure the inventory of those tools to match what you
+actually have on your shopfloor.</p>
+</li>
+<li>
+<p>The starting point for all the CAM modules is <a href="../CAD/Index.html">CAD data</a>, and you
+can get those CAD files by importing 2D or 3D data, or even by drawing it using the
+Sketch tools built into JFY Bend.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once you have a bending solution computed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can use the various <a href="Editing/Index.html">Editor Panels</a> to directly click on and edit
+attributes like the tool setup or the gauging.</p>
+</li>
+<li>
+<p>The <a href="Navigator.html">Bend Navigator</a> can be used like a <em>dashboard</em> to quickly view and
+edit the status of the entire bending operation. Clicking on a warning or error cell here
+takes you to the source of the problem, which you can then fix interactively.</p>
+</li>
+<li>
+<p>The <a href="Operations/Index.html">Operations</a> section describes additional operations on the
+Bend Technology, including changing the bending sequence, and recomputing the solution with
+modified settings.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>

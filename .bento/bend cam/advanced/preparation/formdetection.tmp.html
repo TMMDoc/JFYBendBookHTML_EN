@@ -1,0 +1,141 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_add_a_new_form_to_part">Add a New Form to Part</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The software can detect punch forms which are on one layer in a
+sheet metal model. If a surface model is converted into a metal model, all
+formed areas are detected and converted into punch forms.</p>
+</div>
+<div class="paragraph">
+<p>Import a sheet metal (having formed areas) into {appName}. Select <strong>Convert to Sheet-metal</strong> from workflow panel.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/formcomponent.png" alt="Form component" width="750">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the punch
+form has already been detected, it is highlighted in light green, otherwise it is yellow in color.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newitem353.png" alt="Forms" width="750">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_a_new_form_to_part">Add a New Form to Part</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to detect a formed area in a part:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on any yellow highlighted formed area to access the <strong>Forming</strong> panel.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/newitem354.png" alt="Forming Pane" width="650">
+</div>
+<div class="title">Figure 1. Forming Panel</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Select <strong>Identify&#8230;&#8203;</strong> option to access <strong>Add Forming</strong> panel.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>Make Hole:</strong> The punch form is converted into a hole.</p>
+</li>
+<li>
+<p><strong>Delete:</strong> The punch form is deleted.</p>
+</li>
+<li>
+<p><strong>Similar:</strong> This function selects all forms which are similar in
+appearance to the selected form.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Adjust the settings as required in the <strong>Forming panel</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addform.png" alt="Forming" width="450">
+</div>
+<div class="title">Figure 2. Add Forming</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>Show:</strong> All other forms which are already defined are also
+displayed here. This form can be displayed as reference by clicking on a
+name. To go back to adding the new form, you must click on <strong>NEW</strong> in the
+top of the list.</p>
+</li>
+<li>
+<p><strong>Preview:</strong> Shows a preview of the selected form.</p>
+</li>
+<li>
+<p><strong>Variants:</strong> The same name as the name for an existing form can
+be used. This is normal as there different ways to model a form. If
+several forms with the same name are added, they become variants. Forms
+with several variants have their quantity listed after their name as <strong>Instances</strong> (ex: 3). If one of these forms is selected, all different variants can be
+displayed.
+All of these different variants have the same name and the same
+ID. They are only depicted by different forms. If the software detects
+one of these forms in an assembly, this form will be marked with this
+name and this ID.
+It is possible that two different forms with the same name have
+been grouped incorrectly. In such a situation, the <strong>Separate</strong> button can
+be used to separate the specific variants with a new name.
+Conversely, if two forms which originally had different names
+are to be grouped, simply select one of them and rename it so that it
+coordinates with the other one. Both are grouped together as variants of
+the same form.</p>
+</li>
+<li>
+<p><strong>Name:</strong> This name is used to display the form.</p>
+</li>
+<li>
+<p><strong>Identifier:</strong> An ID can be entered here.</p>
+</li>
+<li>
+<p><strong>Output Layer (DXF):</strong> This setting is used to specify a
+specific layer at which this form is output. This is used by the punch
+CAM system to assign a suitable punching tool.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Press <strong>Add</strong> button to save the form to database for later use.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>

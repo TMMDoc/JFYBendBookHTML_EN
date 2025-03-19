@@ -1,0 +1,159 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_unloading_panel">Unloading Panel</a>
+<ul class="sectlevel2">
+<li><a href="#_simple_unloading_with_no_rotation">Simple unloading with no rotation</a></li>
+<li><a href="#_simple_cycle_with_back_unloading">Simple cycle with back-unloading</a></li>
+<li><a href="#_single_rotation_of_90_degrees">Single rotation of 90 degrees</a></li>
+<li><a href="#_90_degree_two_stage_rotation">90 degree two-stage rotation</a></li>
+<li><a href="#_unloading_to_a_kb40_lane">Unloading to a KB40 lane</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>Unloading</strong> operation for an automated panel-bender (like TBC-7030 or the TBC-7020)
+can be edited by clicking twice on the <em>unloading</em> cell in the navigator on the top. This is
+the cell labelled <strong>U</strong>. Clicking twice on this cell (first to select the unloading operation,
+and then to open the panel) displays this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unload1.png" alt="Unloading Panel" width="551">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unloading_panel">Unloading Panel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here are the settings available in the Unloading panel. Depending on the context, only
+some of these settings may be visible or editable (for example, if you are not rotating
+the part before unloading, the settings related to the rotation center will not appear).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Rotation</strong> setting on the unloading panel is used to control the rotation of the part
+before unloading. This is measured <em>relative</em> to the last processing side, so a value of 0
+here means the part is unloaded directly without any rotation.</p>
+</li>
+<li>
+<p>The <strong>Final Part Z</strong> and <strong>Override</strong> settings control the final Z position of the part-center.
+If there is no <em>override</em>, the machine will push the part out as much as possible based on the
+stroke limitation of the X2 or X4 axis (whichever is used to unload the part). You can restrict
+this movement by turning on the Override switch and setting a value for the final part position.
+(Typically, this is done to prevent the part sticking out too much from the front edge of the
+table at the end of the unloading).</p>
+</li>
+<li>
+<p>For small parts, the option of <strong>Back Unloading</strong> may be available (only on the 7030).
+If this is turned on, the part is pushed back further with the back-face of the manipulator (see
+images below).</p>
+</li>
+<li>
+<p>The <strong>Final Rotor (Z, X)</strong> settings control the Z, X positions of the rotor relative to the part
+center at the <em>end</em> of all the unloading rotations - in other words, at the orientation the part
+is during the discharge.</p>
+</li>
+<li>
+<p>The <strong>Initial Rotor (Z, X)</strong> settings are displayed only if the selected Final Rotor positions require
+two rotations to achieve after the processing of the final side. In this situation, these offsets
+specify the rotor position (relative to the part center) during the first of these two rotations.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some examples of various unloading cycles will help clarify these settings.</p>
+</div>
+<div class="sect2">
+<h3 id="_simple_unloading_with_no_rotation">Simple unloading with no rotation</h3>
+<div class="paragraph">
+<p>The images below show a simple unload cycle with no rotations (the <strong>Rotation</strong> value is set to 0).
+In this cycle, the final part position is overridden to stop the part short. JFY Bend normally computes
+this necessity for override based on whether the part would stick out too much from the edge of the
+table, but you can subsequently turn it on or off, and then adjust the final delivery position of the
+part.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unload3.png" alt="No rotation" width="508">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_simple_cycle_with_back_unloading">Simple cycle with back-unloading</h3>
+<div class="paragraph">
+<p>Here is a part where the <strong>Back unloading</strong> cycle is enabled (this is available only for small parts).
+In step 2, the part is released by the vacuum gripper, which then backs up behind the part (step 3),
+and then pushes the part closer to the operator using the back-face (step 4).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unload6.png" alt="Back Unloading" width="768">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_single_rotation_of_90_degrees">Single rotation of 90 degrees</h3>
+<div class="paragraph">
+<p>The example below shows an unloading with a single 90 degree rotation. In step 1, the part is pulled
+back after the last bend, and clamped by the rotor. The rotor then rotates the part 90 degrees.
+At the end of the rotation (<strong>Step 2</strong>), you can see that the rotor is at the specified
+<strong>Final Rotor (Z,X)</strong> position relative to the part center: <strong>(255, 0)</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unload2.png" alt="Single Rotate" width="738">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_90_degree_two_stage_rotation">90 degree two-stage rotation</h3>
+<div class="paragraph">
+<p>In this example, a 2-stage rotation is required because of the specification of the final rotor
+position.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In Step 1, the part reaches the <strong>Initial Rotor</strong> position of <strong>0, -255</strong> and is clamped by the
+rotor.</p>
+</li>
+<li>
+<p>In Step 2, the intermediate rotation position is reached, and the rotor shifts to re-clamp the
+part.</p>
+</li>
+<li>
+<p>In Step 3, the <strong>Final Rotor</strong> position of <strong>0, 254</strong> is reached.</p>
+</li>
+<li>
+<p>The part is then released from the rotor and unloaded towards the user in Step 4.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unload4.png" alt="Double Rotate" width="876">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_unloading_to_a_kb40_lane">Unloading to a KB40 lane</h3>
+<div class="paragraph">
+<p>If a KB40 loader/unloader attachment is fitted, then the option to unload to a specific KB40 lane
+is available. You can choose between an automatic lane selection, select one of the <strong>UZ1</strong> or <strong>UZ2</strong>
+lanes (provided the part is narrow enough to fit with the lane / lanes).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unload5.png" alt="KB40 Unload" width="837">
+</div>
+</div>
+</div>
+</div>
+</div>

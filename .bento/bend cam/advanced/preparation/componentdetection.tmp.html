@@ -1,0 +1,133 @@
+<div class="paragraph">
+<p>Components such as nuts, screws, etc. do not normally require any
+additional processing in this software. However, it is useful to
+collect, detect, and use such components to generate a possible bill of
+material of additionally purchased items that are required to compose
+the assembly.</p>
+</div>
+<div class="paragraph">
+<p>There are major differences in practice in how even a standard
+component such as a <strong>M8</strong> screw is actually drawn. The software uses a
+learning system which learns such component names based on the example.
+At the beginning, {appName} does not know any standard components and
+they are displayed in yellow (not identified).</p>
+</div>
+<div class="paragraph">
+<p>To detect the component:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Import an assembly part.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/importassembly.png" alt="importassembly">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Click the <strong>workflow</strong> icon and select <strong>explode</strong> assembly.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/explode.png" alt="Explode" width="550">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>All the components in the assembly are opened as separate 3D files.
+image::subparts.png[Separate files,550]</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Click any yellow component on its surface to access <strong>surface</strong> panel.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/surface.png" alt="surface">
+</div>
+<div class="title">Figure 1. Surface panel</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Click <strong>Identify&#8230;&#8203;</strong> to access <strong>Add component</strong> panel.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/addcomp.png" alt="addcomp">
+</div>
+<div class="title">Figure 2. Add Component</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>Adjust the settings as required:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>Show:</strong> All other components which are already defined are
+also displayed here. This component can be displayed as reference by
+clicking on a nameTo go back to adding the new component, you must
+click on <strong>NEW</strong> in the top of the list.</p>
+</li>
+<li>
+<p><strong>Preview:</strong> Shows a preview of the selected component..</p>
+</li>
+<li>
+<p><strong>Variants:</strong> The same name as the name for an existing
+component can be used. It is common for there to be different ways in
+which, for example, the same M8 screw is modeled. If several components
+with the same name are added, they become variants. Components with
+several variants have their quantity listed after their name (e.g.: x4).
+If one of these components is selected, all different variants can be
+displayed.</p>
+</li>
+<li>
+<p><strong>Name:</strong> This name is used to display the component.</p>
+</li>
+<li>
+<p><strong>Identifier:</strong> An ID can be entered here.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>All of these different variants have the
+same name and the same ID. They are only depicted by different 3D
+models. If the software detects one of these 3D models in an assembly,
+this component will be marked with this name and this ID.
+It is possible that two different
+components with the same name have been grouped incorrectly. In such a
+situation, the <strong>separate</strong> button can be used to separate the specific
+variants with a new name.</p>
+</div>
+<div class="paragraph">
+<p>Conversely, if two components which
+originally had different names are to be grouped, simply select one of
+them and rename it so that it coordinates with the other one. Both are
+grouped together as variants of the same component.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="8">
+<li>
+<p>Click <strong>Add</strong> button to save the component to database for later use.</p>
+</li>
+</ol>
+</div>

@@ -1,0 +1,86 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_inserting_a_bitmap">Inserting a Bitmap</a></li>
+<li><a href="#_inserting_a_shape">Inserting a Shape</a></li>
+<li><a href="#_inserting_a_label">Inserting a Label</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition to the data that comes from the part, reports may need some other
+adornments - company logos, standard messages and simple geometric elements
+like divider lines. These are accessed from the <strong>Sys</strong> data source.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inserting_a_bitmap">Inserting a Bitmap</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can add a bitmap (like a company logo, for example) by choosing Sys &gt; Bitmap.
+Pick any image file to insert it into the report. It can then be resized or positioned
+as needed. If you turn on the <strong>Link to File</strong>, JFY Bend will just store a <em>link</em> to the
+image file in the report template. Else it will store a copy of the entire bitmap
+in the report template.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/bitmap.png" alt="Bitmap" width="467">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inserting_a_shape">Inserting a Shape</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use the Sys &gt; Shape option to insert a simple geometric shape into the report.
+You can set the background, fill and outline colors separately, and you can control
+the outline thickness for the shape.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/shape1.png" alt="Shape" width="564">
+</div>
+</div>
+<div class="paragraph">
+<p>In addition to these simple shapes, you can also insert much more complex shapes
+by reading them in from a 2D file (like GEO, DXF or DWG). Choose the <strong>From File</strong>
+option in the shape, and then pick a 2D drawing file.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>. All closed
+outlines in the file are selected and filled with the selected fill color and
+outlined with the selected pen.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/shape2.png" alt="Shape 2">
+</div>
+</div>
+<div class="paragraph">
+<p>Such shapes inserted from DXF and bitmaps often serve similar purposes. However,
+the shapes inserted from a DXF file are <em>vector images</em> and scale very well, even
+if the report is being printed at high resolution. On the other hand, bitmaps may
+not scale well to high resolutions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_inserting_a_label">Inserting a Label</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Labels are inserted automatically when you add a field or a table. However, you
+can insert a standalone label (or any other fixed text) by choosing <strong>Sys &gt; Label</strong></p>
+</div>
+<div class="paragraph">
+<p>These items (bitmaps, labels and shapes) are available for insertion even within
+a sub-report or band. They are then repeated as many times as the band is rendered.</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. After the shape is inserted, the DXF/GEO file is no longer needed; the closed outlines from that file are improted in and stored as part of the report template.
+</div>
+</div>
