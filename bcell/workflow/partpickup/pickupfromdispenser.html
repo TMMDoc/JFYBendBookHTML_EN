@@ -1,0 +1,667 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Pickup from a Dispenser</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img1/jfy.jpg" width="103" height="34" /></div>
+        <div><p>JFY Bend Online Help</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../../../index.html">Welcome to JFY Core</a></li>
+    <li><button class="tree blank"></button><a href="../../../index2.html">Bend your limits with JFY</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../intro/index.html">Introduction</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../intro/install.html">Installing the Software</a></li>
+        <li><button class="tree blank"></button><a href="../../../intro/clarity.html">The User Interface</a></li>
+        <li><button class="tree blank"></button><a href="../../../intro/workflow.html">Part Workflow</a></li>
+        <li><button class="tree blank"></button><a href="../../../intro/database.html">The Machine Database</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../bend cam/index.html">Bend CAM</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../bend cam/createbendtech.html">Create Bend Solution</a></li>
+        <li><button class="tree blank"></button><a href="../../../bend cam/navigator.html">The Bend Navigator</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/editing/index.html">Editor Panels</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editbend.html">Edit a Bend</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editmount.html">Edit a Tool Mount</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editsetup.html">Edit a Bend Setup</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editgauge.html">Edit the Back-Gauges</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editacb.html">Edit Angle Measurement</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/operations/index.html">Bend Operations</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/sequencing.html">Changing the Sequence</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/viewsettings.html">View Settings</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/recompute.html">Recomputing the Solution</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/batchprocess.html">Batch processing</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/advanced/index.html">Advanced Workflow</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/advanced/preparation/index.html">Preparation of Bend Parts</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/preparinga2ddrawing.html">Preparing a 2D drawing</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/editingadrawing.html">Editing a Drawing</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/addbendinginformationastexttodxf.html">Add Bending Information as Text to DXF</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/measuringthesidedimension.html">Measuring and changing Outer Dimension</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/preparing3dmodels.html">Preparing 3D models</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/preparinganassembly.html">Preparing an Assembly</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/componentdetection.html">Component Detection</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/formdetection.html">Form Detection</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/advanced/tooling/index.html">Edit Tools</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tooling/changingtoolmap.html">Changing Tool Map</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tooling/toolpriority.html">Tool Priority</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tooling/creatingatool.html">Creating a Tool</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/usingbenddeductions.html">Using Bend Deductions</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/miscellaneous.html">Comment Section in Bend Panel</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tonnage.html">Tools/Machine Tonnage Check</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/addingatoolstation.html">Adding a Tooling station</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/settings/index.html">Settings</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/settings/1 applicationsettings/index.html">Application Settings</a>
+              <ul class="hide">
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/index.html">Bend CAM</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/bendoutputs.html">Bend Outputs</a></li>
+                    <li><button class="tree blank"></button><a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/bendview.html">Bend View</a></li>
+                    <li><button class="tree blank"></button><a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/bendcell.html">Bend Cell</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/settings/2 databasesettings/index.html">Database Settings</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/materials.html">Materials</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/machines.html">Machines</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/bendtools.html">Bend Tools</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/benddeductions.html">Bend Deductions</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/bendgrippers.html">Bend grippers</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/forms-components.html">Forms/Components</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/settings/bendsettings.html">Bend Settings</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/settings/machinedefaults.html">Machine Defaults</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="../../index.html">Robot Bend CAM</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="../../overview.html">Overview of Robotic Bending</a></li>
+        <li><button class="tree blank"></button><a href="../../basic-steps.html">Basic Steps of Robotic Bending</a></li>
+        <li>
+          <button class="tree open"></button>
+          <a href="../index.html">Workflow</a>
+          <ul>
+            <li>
+              <button class="tree open"></button>
+              <a href="index.html">Part Pickup</a>
+              <ul>
+                <li><button class="tree blank"></button><a href="pickupfrompallet.html">Pickup from a Pallet</a></li>
+                <li><button class="tree blank"></button><a class="active" href="pickupfromdispenser.html">Pickup from a Dispenser</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../insertionstrategy.html">Insertion Strategy</a></li>
+            <li><button class="tree blank"></button><a href="../bendingstrategy.html">Bending Strategy</a></li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../regripping/index.html">Regripping (RG) Stations</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../regripping/regripstations.html">Re-Grip Stations</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/regrip-methods.html">Methods of Regripping</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/adding-regrip.html">Adding ReGrip</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/modify-regrip.html">Modify ReGrip Position</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/remove-regrip.html">Remove ReGripping</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/regrip-with-jaw-gripper.html">Regrip with a Jaw Gripper</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/gripper-panelandsuction-panel.html">Gripper Panel & Suction Panel</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../extractionstrategy.html">Extraction Strategy</a></li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../partdeposit/index.html">Part Deposit</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../partdeposit/adaptpartdeposit.html">Adapt Part Deposit</a></li>
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="../partdeposit/adding-parts-stacks/index.html">Adding Parts & Stacks</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="../partdeposit/adding-parts-stacks/depositpanel.html">Deposit Panel</a></li>
+                    <li><button class="tree blank"></button><a href="../partdeposit/adding-parts-stacks/separator.html">Add Separator Sheets</a></li>
+                    <li><button class="tree blank"></button><a href="../partdeposit/adding-parts-stacks/lockpartrest.html">Lock Part-Rest</a></li>
+                    <li><button class="tree blank"></button><a href="../partdeposit/adding-parts-stacks/repeatgridfield.html">Repeat Grid Field</a></li>
+                    <li><button class="tree blank"></button><a href="../partdeposit/adding-parts-stacks/stackdeposit.html">Deposit Sequence</a></li>
+                  </ul>
+                </li>
+                <li><button class="tree blank"></button><a href="../partdeposit/deposit-pattern-types.html">Deposit Pattern Types</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../waypoints/index.html">Waypoints</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../waypoints/adaptwaypoints.html">Adapt WayPoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/displaywaypoints.html">Display Waypoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/simulatewaypoints.html">Simulate Waypoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/modifywaypoints.html">Modify WayPoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/propertiesofwaypoints.html">Properties of Waypoints</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../advanced topics/index.html">Advanced Topics</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../advanced topics/cellconfig/index.html">Cell Configuration</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../advanced topics/cellconfig/tracksetup.html">Track Setup</a></li>
+                <li><button class="tree blank"></button><a href="../../advanced topics/cellconfig/gripperinventory.html">Gripper Inventory</a></li>
+                <li><button class="tree blank"></button><a href="../../advanced topics/cellconfig/bendcellsettings.html">BendCell settings</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../advanced topics/configure-a-gripper/index.html">Gripper Configuration</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../advanced topics/configure-a-gripper/createeditagripper.html">Create/ Edit a Gripper</a></li>
+                <li><button class="tree blank"></button><a href="../../advanced topics/configure-a-gripper/importgripper.html">Import Gripper from DXF</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../troubleshooting/index.html">Troubleshooting Bend Errors</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../troubleshooting/part-pickup.html">Part Pickup Error</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/collisions-with-machine.html">Collisions with Machine</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/overtravel-of-axis.html">Overtravel of Axis</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/modification-of-waypoints.html">Modifications of Waypoints</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/collision-while-insertion-extraction.html">Collisions while Insertion and Extraction</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../cad/index.html">CAD</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../cad/2dimport.html">2-D Import</a></li>
+        <li><button class="tree blank"></button><a href="../../../cad/3dimport.html">3-D Import</a></li>
+        <li><button class="tree blank"></button><a href="../../../cad/sketch.html">Modifying the Geometry</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../report/index.html">Reports</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../report/designer.html">Report Designer</a></li>
+        <li><button class="tree blank"></button><a href="../../../report/fields.html">Fields, Pictures and Tables</a></li>
+        <li><button class="tree blank"></button><a href="../../../report/bands.html">Bands (sub-reports)</a></li>
+        <li><button class="tree blank"></button><a href="../../../report/labels.html">Labels, Bitmaps and Shapes</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../appendix/index.html">Appendix</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../appendix/3dformats.html">Supported 3D Formats</a></li>
+        <li><button class="tree blank"></button><a href="../../../appendix/bseparatordxf.html">Separator Sheet DXF</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../../../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="../../index.html">Robot Bend CAM</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="../index.html">Workflow</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="index.html">Part Pickup</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="pickupfromdispenser.html">Pickup from a Dispenser</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Pickup from a Dispenser</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/usejawgrip.png" alt="usejawgrip" width="100">
+</div>
+</div>
+<div class="paragraph">
+<p>Small parts are handled using a mechanical gripper, also known as a <strong>Jaw gripper</strong>. If the part is smaller than about 200 x 300 mm, Flux RoboBend will automatically switch to a jaw gripper.</p>
+</div>
+<div class="paragraph">
+<p>Depending on the part geometry, the jaw gripper with the corresponding loading situation is selected. If this is not the case, the gripper can also be added manually. This gripper can only pick up parts from a dispensing station.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_cell_component_dispenser_station">Adding Cell Component - Dispenser Station</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/adddispenser1.png" alt="Add Dispenser" width="500">
+</div>
+</div>
+<div class="paragraph">
+<p>The Dispenser station (Sheet removal station) is available in three variations. These variations differ in the number of their pickup positions and the corresponding linear or rotational axis. The variant to be used must be inserted at the position, specified in the machine layout.</p>
+</div>
+<div class="paragraph">
+<p><strong>Procedure</strong>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open a sheet metal part.</p>
+</li>
+<li>
+<p>Create bending program using the desired machine.</p>
+</li>
+<li>
+<p>Insert the Dispenser station using the below mentioned steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click <strong>Add</strong> <span class="image"><img src="img/plus.png" alt="Add" width="20"></span> icon from the command panel and select <strong>Cell component</strong>.</p>
+</li>
+<li>
+<p>From the <strong>Component</strong> panel, choose a dispenser from the list.</p>
+</li>
+<li>
+<p>Select <strong>Use for Pickup</strong> to enable the added component.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Save the configuration to the component database.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_jaw_gripper">Using Jaw Gripper</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Adjustments to the suction cups, gripper and part location can be made after choosing the loading scenario.</p>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="img/jawgrip2.png" alt="jawgrip2" width="550">
+</div>
+</div>
+<div class="paragraph">
+<p>After creating the Bending process for a part, click twice on the pick up column <strong>P</strong> in the bend navigator to open the <strong>Pickup panel</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/jawgrip1.png" alt="jawgrip1" width="150"></span></p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can also click on the gripper, when the pickup stage is selected :</p>
+</div>
+<div class="paragraph">
+<p>Various settings are used to control this process:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The position and orientation of the dispenser in the machine cell.</p>
+</li>
+<li>
+<p>The orientation of the part on the dispenser.</p>
+</li>
+<li>
+<p>The position and orientation of the jaw gripper on the part.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>These settings are controlled using the <strong>Dispenser</strong> panel,
+the <strong>Pickup</strong> panel and the <strong>Gripper</strong> panel.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the Dispenser
+to open the <strong>Dispenser</strong> panel.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dispenser_panel">Dispenser Panel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Click on the dispenser to open the <strong>dispenser panel</strong>. Flux RoboBend automatically deposits the part on the top left corner of the dispenser and also positions the suction gripper arms at the corners of the part. You can edit the arm configuration, and the dispenser location using this panel</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The part position cannot be changed, it must always be aligned to the top left corner.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Position</strong> option to change the values in the direction of <strong>Z</strong>, <strong>X</strong> axis and <strong>Angle</strong> settings to control the position and orientation of the dispenser, to make it match the actual position in the cell.</p>
+</li>
+<li>
+<p>The <strong>Suction</strong> section is used to control the suction arm configuration.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+It is the operator&#8217;s responsibility to set the arms in a safer way; Flux RoboBend does not actually verify that the arm suction cups are positioned appropriately on the part because this configuration is not present in the NC code.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select an arm and edit the <strong>Angle</strong> and <strong>Length</strong> of an arm from the <strong>Dispenser</strong> panel.</p>
+</li>
+<li>
+<p>Navigate to <strong>Pickup</strong> panel by clicking on the pickup navigation arrow.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/dispenser.png" alt="dispenser"></span> <span class="image"><img src="img/dispenserpanel.png" alt="Panel" width="150"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pickup_panel">Pickup Panel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pickup panel is used to control the part orientation and the position of the gripper on the part.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/pickup1.png" alt="Flip" width="790">
+</div>
+<div class="title">Figure 1. Pickup panel</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/pickup2.png" alt="Pickup" width="320">
+</div>
+<div class="title">Figure 2. Align function</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Flip Part</strong> option rotates the part by 180°.</p>
+</li>
+<li>
+<p><strong>Align Edge</strong> option helps to align to the edge for holding the part in Z or X direction.</p>
+</li>
+<li>
+<p>With the <strong>Rotate Part</strong> option, we can Rotate the part for the Gripper to hold. By default the part is rotated in 90° and with the <strong>Fine Position</strong> option, we can move the part in <strong>Z</strong> and <strong>X</strong> direction with the input value.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/pickup3.png" alt="pickup3">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Also make sure, the <strong>Arm</strong> holding the part is properly placed over the part correctly. You can click over the Arm and move it closer to the part using the Dispenser panel</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/pickup4.png" alt="pickup4" width="600">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When you use the <strong>Rotate Part</strong> or <strong>Flip</strong> option, you may get the collision message (indicated by change in color of the component to RED). The same is also highlighted in <strong>Bend Navigator</strong> in the relevant column.</p>
+</li>
+<li>
+<p>Fix the errors using the <strong>Pickup</strong> panel or the <strong>Dispenser</strong> panel to proceed further.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/pickup5.png" alt="pickup5">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gripper_panel_jaw_gripper_mechanical_gripper">Gripper Panel (Jaw Gripper/ Mechanical Gripper)</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When using a dispenser to feed part into a bend machine, Flux RoboBend by default assigns a <strong>Jaw gripper</strong>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <strong>Gripper</strong> panel is used to select a different gripper, or to change the position and orientation at which the gripper picks up the part.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/gripper3.png" alt="Gripper" width="350">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can also access <strong>Gripper</strong> panel by using navigation link from the <strong>Pickup</strong> panel.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Name</strong> dropdown list to select a different jaw gripper.</p>
+</li>
+<li>
+<p>Flux Robobend automatically selects the Gripper from the list which can be used for the part provided. Ensure if the selected Gripper best suits the requirement.</p>
+</li>
+<li>
+<p><strong>Position</strong> option moves the Gripper along <strong>Z</strong> &amp; <strong>X</strong> direction and <strong>Angle</strong> option turns the gripper with respect to <strong>Y</strong> axis.</p>
+</li>
+<li>
+<p>Select <strong>Use Vacuum Grip</strong> option to switch to a suction based gripper. Flux RoboBend automatically picks a suitable vacuum gripper available from the database.</p>
+</li>
+<li>
+<p><strong>Swivel Neck</strong> option highlighted in the below image, helps to rotate the Jaw Neck by 180°.</p>
+</li>
+<li>
+<p><strong>Slide Gripper</strong> option helps to slide the position of the Gripper.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/gripper4.png" alt="gripper4">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the <strong>Set Grip Plane</strong> and then move the mouse over the plane to set. As you hover over, a blue cross marker is visible on the plane to indicate it.</p>
+</li>
+<li>
+<p>Click on the plane, and the gripper is moved to that plane (as seen in the image below).
+This function can be used both during the regrip cycle, and also during part pickup.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/gripper5.png" alt="Gripper plane" width="600">
+</div>
+<div class="title">Figure 3. Set Grip Plane</div>
+</div>
+<div class="paragraph">
+<p>As you make these changes, Flux RoboBend computes the collision status of the gripper with the punch, the die, the part, and other components in real time <em>for all bends</em> and displays this in the navigator on the top. Thus, it is very easy to try different gripper positions, with immediate feedback.</p>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_adding_cell_component_dispenser_station">Adding Cell Component - Dispenser Station</a>
+    </li>
+    <li level="1">
+      <a href="#_using_jaw_gripper">Using Jaw Gripper</a>
+    </li>
+    <li level="1">
+      <a href="#_dispenser_panel">Dispenser Panel</a>
+    </li>
+    <li level="1">
+      <a href="#_pickup_panel">Pickup Panel</a>
+    </li>
+    <li level="1">
+      <a href="#_gripper_panel_jaw_gripper_mechanical_gripper">Gripper Panel (Jaw Gripper/ Mechanical Gripper)</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="pickupfrompallet.html">Pickup from a Pallet</a></span>
+  <span class="next"><a href="../insertionstrategy.html">Insertion Strategy</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Jiangsu Jinfangyuan CNC Machine Co. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

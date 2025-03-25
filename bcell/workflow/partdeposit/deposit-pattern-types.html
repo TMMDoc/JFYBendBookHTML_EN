@@ -1,0 +1,599 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Deposit Pattern Types</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img1/jfy.jpg" width="103" height="34" /></div>
+        <div><p>JFY Bend Online Help</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../../../index.html">Welcome to JFY Core</a></li>
+    <li><button class="tree blank"></button><a href="../../../index2.html">Bend your limits with JFY</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../intro/index.html">Introduction</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../intro/install.html">Installing the Software</a></li>
+        <li><button class="tree blank"></button><a href="../../../intro/clarity.html">The User Interface</a></li>
+        <li><button class="tree blank"></button><a href="../../../intro/workflow.html">Part Workflow</a></li>
+        <li><button class="tree blank"></button><a href="../../../intro/database.html">The Machine Database</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../bend cam/index.html">Bend CAM</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../bend cam/createbendtech.html">Create Bend Solution</a></li>
+        <li><button class="tree blank"></button><a href="../../../bend cam/navigator.html">The Bend Navigator</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/editing/index.html">Editor Panels</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editbend.html">Edit a Bend</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editmount.html">Edit a Tool Mount</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editsetup.html">Edit a Bend Setup</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editgauge.html">Edit the Back-Gauges</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editacb.html">Edit Angle Measurement</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/operations/index.html">Bend Operations</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/sequencing.html">Changing the Sequence</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/viewsettings.html">View Settings</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/recompute.html">Recomputing the Solution</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/batchprocess.html">Batch processing</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/advanced/index.html">Advanced Workflow</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/advanced/preparation/index.html">Preparation of Bend Parts</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/preparinga2ddrawing.html">Preparing a 2D drawing</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/editingadrawing.html">Editing a Drawing</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/addbendinginformationastexttodxf.html">Add Bending Information as Text to DXF</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/measuringthesidedimension.html">Measuring and changing Outer Dimension</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/preparing3dmodels.html">Preparing 3D models</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/preparinganassembly.html">Preparing an Assembly</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/componentdetection.html">Component Detection</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/formdetection.html">Form Detection</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/advanced/tooling/index.html">Edit Tools</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tooling/changingtoolmap.html">Changing Tool Map</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tooling/toolpriority.html">Tool Priority</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tooling/creatingatool.html">Creating a Tool</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/usingbenddeductions.html">Using Bend Deductions</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/miscellaneous.html">Comment Section in Bend Panel</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tonnage.html">Tools/Machine Tonnage Check</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/addingatoolstation.html">Adding a Tooling station</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/settings/index.html">Settings</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/settings/1 applicationsettings/index.html">Application Settings</a>
+              <ul class="hide">
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/index.html">Bend CAM</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/bendoutputs.html">Bend Outputs</a></li>
+                    <li><button class="tree blank"></button><a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/bendview.html">Bend View</a></li>
+                    <li><button class="tree blank"></button><a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/bendcell.html">Bend Cell</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/settings/2 databasesettings/index.html">Database Settings</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/materials.html">Materials</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/machines.html">Machines</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/bendtools.html">Bend Tools</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/benddeductions.html">Bend Deductions</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/bendgrippers.html">Bend grippers</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/forms-components.html">Forms/Components</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/settings/bendsettings.html">Bend Settings</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/settings/machinedefaults.html">Machine Defaults</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="../../index.html">Robot Bend CAM</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="../../overview.html">Overview of Robotic Bending</a></li>
+        <li><button class="tree blank"></button><a href="../../basic-steps.html">Basic Steps of Robotic Bending</a></li>
+        <li>
+          <button class="tree open"></button>
+          <a href="../index.html">Workflow</a>
+          <ul>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../partpickup/index.html">Part Pickup</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../partpickup/pickupfrompallet.html">Pickup from a Pallet</a></li>
+                <li><button class="tree blank"></button><a href="../partpickup/pickupfromdispenser.html">Pickup from a Dispenser</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../insertionstrategy.html">Insertion Strategy</a></li>
+            <li><button class="tree blank"></button><a href="../bendingstrategy.html">Bending Strategy</a></li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../regripping/index.html">Regripping (RG) Stations</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../regripping/regripstations.html">Re-Grip Stations</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/regrip-methods.html">Methods of Regripping</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/adding-regrip.html">Adding ReGrip</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/modify-regrip.html">Modify ReGrip Position</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/remove-regrip.html">Remove ReGripping</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/regrip-with-jaw-gripper.html">Regrip with a Jaw Gripper</a></li>
+                <li><button class="tree blank"></button><a href="../regripping/gripper-panelandsuction-panel.html">Gripper Panel & Suction Panel</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../extractionstrategy.html">Extraction Strategy</a></li>
+            <li>
+              <button class="tree open"></button>
+              <a href="index.html">Part Deposit</a>
+              <ul>
+                <li><button class="tree blank"></button><a href="adaptpartdeposit.html">Adapt Part Deposit</a></li>
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="adding-parts-stacks/index.html">Adding Parts & Stacks</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="adding-parts-stacks/depositpanel.html">Deposit Panel</a></li>
+                    <li><button class="tree blank"></button><a href="adding-parts-stacks/separator.html">Add Separator Sheets</a></li>
+                    <li><button class="tree blank"></button><a href="adding-parts-stacks/lockpartrest.html">Lock Part-Rest</a></li>
+                    <li><button class="tree blank"></button><a href="adding-parts-stacks/repeatgridfield.html">Repeat Grid Field</a></li>
+                    <li><button class="tree blank"></button><a href="adding-parts-stacks/stackdeposit.html">Deposit Sequence</a></li>
+                  </ul>
+                </li>
+                <li><button class="tree blank"></button><a class="active" href="deposit-pattern-types.html">Deposit Pattern Types</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../waypoints/index.html">Waypoints</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../waypoints/adaptwaypoints.html">Adapt WayPoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/displaywaypoints.html">Display Waypoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/simulatewaypoints.html">Simulate Waypoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/modifywaypoints.html">Modify WayPoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/propertiesofwaypoints.html">Properties of Waypoints</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../advanced topics/index.html">Advanced Topics</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../advanced topics/cellconfig/index.html">Cell Configuration</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../advanced topics/cellconfig/tracksetup.html">Track Setup</a></li>
+                <li><button class="tree blank"></button><a href="../../advanced topics/cellconfig/gripperinventory.html">Gripper Inventory</a></li>
+                <li><button class="tree blank"></button><a href="../../advanced topics/cellconfig/bendcellsettings.html">BendCell settings</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../advanced topics/configure-a-gripper/index.html">Gripper Configuration</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../advanced topics/configure-a-gripper/createeditagripper.html">Create/ Edit a Gripper</a></li>
+                <li><button class="tree blank"></button><a href="../../advanced topics/configure-a-gripper/importgripper.html">Import Gripper from DXF</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../troubleshooting/index.html">Troubleshooting Bend Errors</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../troubleshooting/part-pickup.html">Part Pickup Error</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/collisions-with-machine.html">Collisions with Machine</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/overtravel-of-axis.html">Overtravel of Axis</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/modification-of-waypoints.html">Modifications of Waypoints</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/collision-while-insertion-extraction.html">Collisions while Insertion and Extraction</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../cad/index.html">CAD</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../cad/2dimport.html">2-D Import</a></li>
+        <li><button class="tree blank"></button><a href="../../../cad/3dimport.html">3-D Import</a></li>
+        <li><button class="tree blank"></button><a href="../../../cad/sketch.html">Modifying the Geometry</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../report/index.html">Reports</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../report/designer.html">Report Designer</a></li>
+        <li><button class="tree blank"></button><a href="../../../report/fields.html">Fields, Pictures and Tables</a></li>
+        <li><button class="tree blank"></button><a href="../../../report/bands.html">Bands (sub-reports)</a></li>
+        <li><button class="tree blank"></button><a href="../../../report/labels.html">Labels, Bitmaps and Shapes</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../appendix/index.html">Appendix</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../appendix/3dformats.html">Supported 3D Formats</a></li>
+        <li><button class="tree blank"></button><a href="../../../appendix/bseparatordxf.html">Separator Sheet DXF</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../../../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="../../index.html">Robot Bend CAM</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="../index.html">Workflow</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="index.html">Part Deposit</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="deposit-pattern-types.html">Deposit Pattern Types</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Deposit Pattern Types</h1>
+<div class="sect1">
+<h2 id="_patterns">Patterns</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_simple_grid">Simple Grid</h3>
+<div class="paragraph">
+<p>The <strong>Simple Grid</strong> pattern is the most commonly used, and just stacks parts in a rectangular grid on the pallet.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/simple.png" alt="Simple">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_weave">Weave</h3>
+<div class="paragraph">
+<p>The <strong>Weave</strong> pattern is useful with long and thin parts. The parts in the <strong>D2</strong> layers are placed 90&#176; from the parts in the <strong>D1</strong> layer as shown alongside.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/weave1.png" alt="weave1">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/weave2.png" alt="weave2">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>Weave</strong> setting controls the number of parts stacked side by side in each layer of the weave.</p>
+</li>
+<li>
+<p>The <strong>Gap</strong> is the gap between each of these parts within the weave</p>
+</li>
+<li>
+<p>The <strong>Grid</strong> settings on the Repeat tab can then be used to repeat the entire weave stack multiple times on the pallet. In this example, the weave stack is repeated twice (2 columns, 1 row).</p>
+</li>
+<li>
+<p>The <strong>Gap</strong> setting on the Repeat tab is used when the weave is repeated and specifies the pitch between the weave layers.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alternating">Alternating</h3>
+<div class="paragraph">
+<p>The <strong>Alternating</strong> pattern is the most flexible. In this pattern, you can control the orientation, flip and relative shift of every alternating layer.</p>
+</div>
+<div class="paragraph">
+<p>Alternate pattern provides a more stable and also a compact stacking of parts.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Adjust the <strong>Delta shift</strong> values in D1, D2 and use the <strong>Regrip before</strong> to lock the parts with each other.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/alternate.png" alt="Alternate">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_examples_of_alternate_stacking">Examples of Alternate Stacking:</h4>
+<div class="imageblock">
+<div class="content">
+<img src="img/alternate1.png" alt="alternate1">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/alternate2.png" alt="alternate2">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/alternate3.png" alt="alternate3">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alternating_batch">Alternating Batch</h3>
+<div class="paragraph">
+<p>Alternating batch pattern is similar to alternating pattern, but with the possibility to stack components in batches and alternate layers.</p>
+</div>
+<div class="paragraph">
+<p><strong>Batch shift</strong> is used to move parts to and from the Z and X axes within a batch.</p>
+</div>
+<div class="paragraph">
+<p><strong>Batch count</strong> is used to define the number of components per batch per deposit D1, which can range from 1 to 50. In the below example it is set to 5.</p>
+</div>
+<div class="paragraph">
+<p><strong>Delta shift</strong> is used to move an entire deposit D1 consisting of batches to and from the Z and X axes.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/altbatch1.png" alt="Alternating" width="600">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/altbatch2.png" alt="Alternating" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Use the <strong>layers</strong> option in the <strong>Repeat grid (R)</strong> tab to define the number of batches per deposit. In the below example, it is set to 2.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/altbatch3.png" alt="Alternating" width="600">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_drop_to_basket">Drop to Basket</h3>
+<div class="paragraph">
+<p>This pattern is used to drop small parts into a collection basket, using the mechanical gripper.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/droptobasket.png" alt="Drop to basket">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_conveyor">Conveyor</h3>
+<div class="paragraph">
+<p><strong>Conveyor</strong> pattern is used to deposit parts on a part conveyor. This option is essential when long thin parts are deposited on conveyor.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When mechanical jaw gripper is used for medium size parts, all other pattern types will be disabled for selection, except for conveyor pattern.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/droptoconveyor.png" alt="Drop to conveyor">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inclined">Inclined</h3>
+<div class="paragraph">
+<p>The <strong>Inclined</strong> pattern is used to stack parts vertically against a wall (or a pallet that has a side-wall).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This pattern is not always available. The part must be large enough for this to be feasible. For small parts, the robot cannot reach down low enough to stack the part against the wall.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/inclined.png" alt="Inclined">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inclined_pair">Inclined pair</h3>
+<div class="paragraph">
+<p>This pattern type is very similar to alternating pattern, except the parts are deposited vertically as a pair.</p>
+</div>
+<div class="paragraph">
+<p>An additonal <strong>Regrip</strong> is introduced either in <strong>D1</strong> or <strong>D2</strong> deposit to make a pair.</p>
+</div>
+<div class="paragraph">
+<p><strong>Auto-pitch</strong> determines the lean angle of the stack automatically.</p>
+</div>
+<div class="paragraph">
+<p><strong>Pitch</strong> setting is used to adjust the lean angle of the stacking and <strong>Delta shift</strong> values are used to move in the part in <em>X</em> and <em>R</em> axes to make a more compact stack.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/inclinedpair1.png" alt="inclinedpair1"></span> <span class="image"><img src="img/inclinedpair2.png" alt="inclinedpair2"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_manual">Manual</h3>
+<div class="paragraph">
+<p>The <strong>Manual</strong> pattern is used to place each layer of parts at a slightly different orientation.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/manual.png" alt="manual"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Add</strong> button to add a new part on top of the upper-most layer.</p>
+</li>
+<li>
+<p>Use the navigation <span class="icon"><i class="fa fa-chevron-left"></i></span> <span class="icon"><i class="fa fa-chevron-right"></i></span> buttons next to the <strong>Dn</strong> tab to go to the previous or next layer.</p>
+</li>
+<li>
+<p>The <strong>Delta shift</strong>, <strong>Rotate</strong> and <strong>Pitch</strong> settings can be used to adjust the part so it sits better on the part below. You can also use the <strong>Delta shift</strong> and click on <strong>Auto-pitch</strong> to ask Flux to compute an optimal pitch angle.</p>
+</li>
+<li>
+<p>Use the <strong>Remove</strong> button to remove the topmost part.</p>
+</li>
+<li>
+<p>After a manual stack is created, you can use the settings on the Repeat tab <strong>(R)</strong> to repeat the same stack across the pallet. The image above shows the same stack repeated for 2 columns, 1 row with a gap of 250 mm between columns.</p>
+</li>
+<li>
+<p>The settings on the Sequence tab <strong>(S)</strong> can be used to control whether the parts are stacked <strong>by layer</strong> or <strong>by pile</strong>. If you use the pile-by-pile stacking, all the parts on the first pile are finished before we start on the second pile.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_patterns">Patterns</a>
+    </li>
+    <li level="2">
+      <a href="#_simple_grid">Simple Grid</a>
+    </li>
+    <li level="2">
+      <a href="#_weave">Weave</a>
+    </li>
+    <li level="2">
+      <a href="#_alternating">Alternating</a>
+    </li>
+    <li level="2">
+      <a href="#_alternating_batch">Alternating Batch</a>
+    </li>
+    <li level="2">
+      <a href="#_drop_to_basket">Drop to Basket</a>
+    </li>
+    <li level="2">
+      <a href="#_conveyor">Conveyor</a>
+    </li>
+    <li level="2">
+      <a href="#_inclined">Inclined</a>
+    </li>
+    <li level="2">
+      <a href="#_inclined_pair">Inclined pair</a>
+    </li>
+    <li level="2">
+      <a href="#_manual">Manual</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="adding-parts-stacks/stackdeposit.html">Deposit Sequence</a></span>
+  <span class="next"><a href="../waypoints/index.html">Waypoints</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Jiangsu Jinfangyuan CNC Machine Co. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

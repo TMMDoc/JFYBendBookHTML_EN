@@ -1,0 +1,588 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Methods of Regripping</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img1/jfy.jpg" width="103" height="34" /></div>
+        <div><p>JFY Bend Online Help</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../../../index.html">Welcome to JFY Core</a></li>
+    <li><button class="tree blank"></button><a href="../../../index2.html">Bend your limits with JFY</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../intro/index.html">Introduction</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../intro/install.html">Installing the Software</a></li>
+        <li><button class="tree blank"></button><a href="../../../intro/clarity.html">The User Interface</a></li>
+        <li><button class="tree blank"></button><a href="../../../intro/workflow.html">Part Workflow</a></li>
+        <li><button class="tree blank"></button><a href="../../../intro/database.html">The Machine Database</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../bend cam/index.html">Bend CAM</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../bend cam/createbendtech.html">Create Bend Solution</a></li>
+        <li><button class="tree blank"></button><a href="../../../bend cam/navigator.html">The Bend Navigator</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/editing/index.html">Editor Panels</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editbend.html">Edit a Bend</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editmount.html">Edit a Tool Mount</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editsetup.html">Edit a Bend Setup</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editgauge.html">Edit the Back-Gauges</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/editing/editacb.html">Edit Angle Measurement</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/operations/index.html">Bend Operations</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/sequencing.html">Changing the Sequence</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/viewsettings.html">View Settings</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/recompute.html">Recomputing the Solution</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/operations/batchprocess.html">Batch processing</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/advanced/index.html">Advanced Workflow</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/advanced/preparation/index.html">Preparation of Bend Parts</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/preparinga2ddrawing.html">Preparing a 2D drawing</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/editingadrawing.html">Editing a Drawing</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/addbendinginformationastexttodxf.html">Add Bending Information as Text to DXF</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/measuringthesidedimension.html">Measuring and changing Outer Dimension</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/preparing3dmodels.html">Preparing 3D models</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/preparinganassembly.html">Preparing an Assembly</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/componentdetection.html">Component Detection</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/preparation/formdetection.html">Form Detection</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/advanced/tooling/index.html">Edit Tools</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tooling/changingtoolmap.html">Changing Tool Map</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tooling/toolpriority.html">Tool Priority</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tooling/creatingatool.html">Creating a Tool</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/usingbenddeductions.html">Using Bend Deductions</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/miscellaneous.html">Comment Section in Bend Panel</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/tonnage.html">Tools/Machine Tonnage Check</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/advanced/addingatoolstation.html">Adding a Tooling station</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../../bend cam/settings/index.html">Settings</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/settings/1 applicationsettings/index.html">Application Settings</a>
+              <ul class="hide">
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/index.html">Bend CAM</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/bendoutputs.html">Bend Outputs</a></li>
+                    <li><button class="tree blank"></button><a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/bendview.html">Bend View</a></li>
+                    <li><button class="tree blank"></button><a href="../../../bend cam/settings/1 applicationsettings/2 bendcam/bendcell.html">Bend Cell</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../../bend cam/settings/2 databasesettings/index.html">Database Settings</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/materials.html">Materials</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/machines.html">Machines</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/bendtools.html">Bend Tools</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/benddeductions.html">Bend Deductions</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/bendgrippers.html">Bend grippers</a></li>
+                <li><button class="tree blank"></button><a href="../../../bend cam/settings/2 databasesettings/forms-components.html">Forms/Components</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/settings/bendsettings.html">Bend Settings</a></li>
+            <li><button class="tree blank"></button><a href="../../../bend cam/settings/machinedefaults.html">Machine Defaults</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="../../index.html">Robot Bend CAM</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="../../overview.html">Overview of Robotic Bending</a></li>
+        <li><button class="tree blank"></button><a href="../../basic-steps.html">Basic Steps of Robotic Bending</a></li>
+        <li>
+          <button class="tree open"></button>
+          <a href="../index.html">Workflow</a>
+          <ul>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../partpickup/index.html">Part Pickup</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../partpickup/pickupfrompallet.html">Pickup from a Pallet</a></li>
+                <li><button class="tree blank"></button><a href="../partpickup/pickupfromdispenser.html">Pickup from a Dispenser</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../insertionstrategy.html">Insertion Strategy</a></li>
+            <li><button class="tree blank"></button><a href="../bendingstrategy.html">Bending Strategy</a></li>
+            <li>
+              <button class="tree open"></button>
+              <a href="index.html">Regripping (RG) Stations</a>
+              <ul>
+                <li><button class="tree blank"></button><a href="regripstations.html">Re-Grip Stations</a></li>
+                <li><button class="tree blank"></button><a class="active" href="regrip-methods.html">Methods of Regripping</a></li>
+                <li><button class="tree blank"></button><a href="adding-regrip.html">Adding ReGrip</a></li>
+                <li><button class="tree blank"></button><a href="modify-regrip.html">Modify ReGrip Position</a></li>
+                <li><button class="tree blank"></button><a href="remove-regrip.html">Remove ReGripping</a></li>
+                <li><button class="tree blank"></button><a href="regrip-with-jaw-gripper.html">Regrip with a Jaw Gripper</a></li>
+                <li><button class="tree blank"></button><a href="gripper-panelandsuction-panel.html">Gripper Panel & Suction Panel</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../extractionstrategy.html">Extraction Strategy</a></li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../partdeposit/index.html">Part Deposit</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../partdeposit/adaptpartdeposit.html">Adapt Part Deposit</a></li>
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="../partdeposit/adding-parts-stacks/index.html">Adding Parts & Stacks</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="../partdeposit/adding-parts-stacks/depositpanel.html">Deposit Panel</a></li>
+                    <li><button class="tree blank"></button><a href="../partdeposit/adding-parts-stacks/separator.html">Add Separator Sheets</a></li>
+                    <li><button class="tree blank"></button><a href="../partdeposit/adding-parts-stacks/lockpartrest.html">Lock Part-Rest</a></li>
+                    <li><button class="tree blank"></button><a href="../partdeposit/adding-parts-stacks/repeatgridfield.html">Repeat Grid Field</a></li>
+                    <li><button class="tree blank"></button><a href="../partdeposit/adding-parts-stacks/stackdeposit.html">Deposit Sequence</a></li>
+                  </ul>
+                </li>
+                <li><button class="tree blank"></button><a href="../partdeposit/deposit-pattern-types.html">Deposit Pattern Types</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../waypoints/index.html">Waypoints</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../waypoints/adaptwaypoints.html">Adapt WayPoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/displaywaypoints.html">Display Waypoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/simulatewaypoints.html">Simulate Waypoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/modifywaypoints.html">Modify WayPoints</a></li>
+                <li><button class="tree blank"></button><a href="../waypoints/propertiesofwaypoints.html">Properties of Waypoints</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../advanced topics/index.html">Advanced Topics</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../advanced topics/cellconfig/index.html">Cell Configuration</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../advanced topics/cellconfig/tracksetup.html">Track Setup</a></li>
+                <li><button class="tree blank"></button><a href="../../advanced topics/cellconfig/gripperinventory.html">Gripper Inventory</a></li>
+                <li><button class="tree blank"></button><a href="../../advanced topics/cellconfig/bendcellsettings.html">BendCell settings</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../../advanced topics/configure-a-gripper/index.html">Gripper Configuration</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../../advanced topics/configure-a-gripper/createeditagripper.html">Create/ Edit a Gripper</a></li>
+                <li><button class="tree blank"></button><a href="../../advanced topics/configure-a-gripper/importgripper.html">Import Gripper from DXF</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../../troubleshooting/index.html">Troubleshooting Bend Errors</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../troubleshooting/part-pickup.html">Part Pickup Error</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/collisions-with-machine.html">Collisions with Machine</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/overtravel-of-axis.html">Overtravel of Axis</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/modification-of-waypoints.html">Modifications of Waypoints</a></li>
+            <li><button class="tree blank"></button><a href="../../troubleshooting/collision-while-insertion-extraction.html">Collisions while Insertion and Extraction</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../cad/index.html">CAD</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../cad/2dimport.html">2-D Import</a></li>
+        <li><button class="tree blank"></button><a href="../../../cad/3dimport.html">3-D Import</a></li>
+        <li><button class="tree blank"></button><a href="../../../cad/sketch.html">Modifying the Geometry</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../report/index.html">Reports</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../report/designer.html">Report Designer</a></li>
+        <li><button class="tree blank"></button><a href="../../../report/fields.html">Fields, Pictures and Tables</a></li>
+        <li><button class="tree blank"></button><a href="../../../report/bands.html">Bands (sub-reports)</a></li>
+        <li><button class="tree blank"></button><a href="../../../report/labels.html">Labels, Bitmaps and Shapes</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../../../appendix/index.html">Appendix</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../appendix/3dformats.html">Supported 3D Formats</a></li>
+        <li><button class="tree blank"></button><a href="../../../appendix/bseparatordxf.html">Separator Sheet DXF</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../../../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="../../index.html">Robot Bend CAM</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="../index.html">Workflow</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="index.html">Regripping (RG) Stations</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="regrip-methods.html">Methods of Regripping</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Methods of Regripping</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are various settings used to control the regripping process.</p>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="img/rg-method2.png" alt="rg method2" width="550">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Method</strong> option  to pick the method to process regripping.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Clamp,</p>
+</li>
+<li>
+<p>Clamp+Station,</p>
+</li>
+<li>
+<p>During Bend,</p>
+</li>
+<li>
+<p>Station,</p>
+</li>
+<li>
+<p>Post Bend.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/rg-method1.png" alt="RG-Method1" width="250">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Swivel</strong> option helps in the direction of the Gripper around the part during the Re-gripping process.</p>
+</li>
+<li>
+<p>The <strong>Insert part first</strong> option is already discussed during  <strong>insertion strategy</strong>. The similar way is used here.</p>
+</li>
+<li>
+<p><strong>BG: Z before X</strong> option is already discussed during <strong>insertion strategy</strong>. The similar way is used here.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_clamp_method">Clamp Method</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/clampmethod.png" alt="clampmethod" width="125">
+</div>
+</div>
+<div class="paragraph">
+<p>When you select the the <strong>Clamp</strong> method, the Gripper will use the Bend Tool to hold the part and complete the swivel sequence and re-grips from the other side of the part.</p>
+</div>
+<div class="paragraph">
+<p>You can see below a typical route that Flux RoboBend computes to take the gripper around to the other side.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/clampmethod1.png" alt="clampmethod1">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>1.</strong> Gripper moves in towards the bend position.<br>
+<strong>2.</strong> Part kept now in the Clamping position with Tool.<br>
+<strong>3.</strong> Gripper Retract and swivel towards the Left side while the part in Clamping position (Swivel- Left).<br>
+<strong>4.</strong> Gripper takes the Trajectory with the help of Robot to turn upside down.<br>
+<strong>5.</strong> Gripper comes in contact under the part.<br>
+<strong>6.</strong> Re-Gripping completes the cycle with the <strong>CLAMP</strong> method.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_clamp_station_method">Clamp + Station Method</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/clamp-stationmethod.png" alt="clamp stationmethod" width="125">
+</div>
+</div>
+<div class="paragraph">
+<p>When you select the the <strong>Clamp+Station</strong> method, the Re-Gripping happens at the clamping point but also the <strong>Regrip Stations</strong> supporting the part.</p>
+</div>
+<div class="paragraph">
+<p>You can see below a typical route that Flux computes to take the gripper around to the other side.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/clamp-stationmethod1.png" alt="clamp stationmethod1">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>1.</strong> Gripper moves in towards the bend position under the tool also the <strong>Re-gripping stations</strong> comes to hold the part from bottom and Bend Tool comes down with Part in Clamping position with Tool.<br>
+<strong>2.</strong> Gripper Retract and Swivel towards the Left side while the part in Clamping position (Swivel- Left).<br>
+<strong>3.</strong> Gripper takes the Trajectory with the help of Robot to turn upside down.<br>
+<strong>4.</strong> Gripper comes in contact under the part.<br>
+<strong>5.</strong> Re-Gripping Stations moves out from the gripping position and this completes the cycle with the <strong>Clamp-Station</strong> method.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_during_bend_method">During Bend Method</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/duringbend.png" alt="duringbend" width="125">
+</div>
+</div>
+<div class="paragraph">
+<p>When you select the <strong>During Bend</strong> method, the Re-Gripping happens at the clamping point during the Bending process without Regrip-Stations.</p>
+</div>
+<div class="paragraph">
+<p>You can see below a typical route that Flux computes to take the gripper around to the other side</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/duringbend1.png" alt="duringbend1">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>1.</strong> Gripper moves in towards the bend position. &amp; Part kept now in the Clamping position with Tool.<br>
+<strong>2.</strong> Gripper Retract and swivel towards the Left side while the part in Clamping position (Swivel- Left).<br>
+<strong>3.</strong> Gripper takes the Trajectory with the help of Robot to turn upside down.<br>
+<strong>4.</strong> At same time Bend Process completes.<br>
+<strong>5.</strong> Gripper comes in contact under the part.<br>
+<strong>6.</strong> Tool moves Up after Gripper in contact.<br>
+<strong>7.</strong> Part now retracts and Re-Gripping completes the cycle with the <strong>During Bend</strong> method</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_station_method">Station Method</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/stationmethod.png" alt="stationmethod" width="125">
+</div>
+</div>
+<div class="paragraph">
+<p>When you select the the <strong>Station</strong> method, the Re-Gripping happens with the Regrip Stations supporting the part.</p>
+</div>
+<div class="paragraph">
+<p>You can see below a typical route that Flux RoboBend computes to take the gripper around to the other side.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/stationmethod1.png" alt="stationmethod1">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>1.</strong> Gripper moves in and also the Re-gripping stations comes to hold the part from bottom.<br>
+<strong>2.</strong> Gripper Retract and Swivel towards the Left side while the part in Clamping position (Swivel- Left).<br>
+<strong>3.</strong> Gripper takes the Trajectory with the help of Robot to turn upside down.<br>
+<strong>4.</strong> Gripper comes in contact under the part.<br>
+<strong>5.</strong> Re-Gripping Stations moves out from the gripping position and this completes the cycle with the <strong>Station</strong> method.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_post_bend_method">Post-Bend Method</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/postbend.png" alt="postbend" width="125">
+</div>
+</div>
+<div class="paragraph">
+<p>When you select the the <strong>Post-Bend</strong> method, the Re-Gripping happens after the Bending process with the part still at the clamping point.</p>
+</div>
+<div class="paragraph">
+<p>You can see below a typical route that Flux RoboBend computes to take the gripper around to the other side</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/postbend1.png" alt="postbend1">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>1.</strong> Bending Process completes with the Part kept under the Clamping position with Tool.<br>
+<strong>2.</strong> Gripper Retract and swivel towards the Front side while the part in Clamping position (Swivel- Front).<br>
+<strong>3.</strong> Gripper takes the Trajectory with the help of Robot to rotate to the required position.<br>
+<strong>4.</strong> Gripper comes in contact under the part.<br>
+<strong>5.</strong> Tool moves up after Gripper in contact.<br>
+<strong>6.</strong> Part now retracts and Re-Gripping completes the cycle with the <strong>Post-Bend</strong> method.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_swivel_option">Swivel Option</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/swivel.png" alt="swivel" width="125">
+</div>
+</div>
+<div class="paragraph">
+<p>Swivel option helps in the direction of the Gripper around the part during the Re-gripping process.
+With the three options of swivel, we can make the Re-gripping sequence for the movement of the gripper.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Front</p>
+</li>
+<li>
+<p>Left</p>
+</li>
+<li>
+<p>Right</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/swivel1.png" alt="swivel1" width="700">
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_clamp_method">Clamp Method</a>
+    </li>
+    <li level="1">
+      <a href="#_clamp_station_method">Clamp + Station Method</a>
+    </li>
+    <li level="1">
+      <a href="#_during_bend_method">During Bend Method</a>
+    </li>
+    <li level="1">
+      <a href="#_station_method">Station Method</a>
+    </li>
+    <li level="1">
+      <a href="#_post_bend_method">Post-Bend Method</a>
+    </li>
+    <li level="1">
+      <a href="#_swivel_option">Swivel Option</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="regripstations.html">Re-Grip Stations</a></span>
+  <span class="next"><a href="adding-regrip.html">Adding ReGrip</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Jiangsu Jinfangyuan CNC Machine Co. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

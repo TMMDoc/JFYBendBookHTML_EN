@@ -1,0 +1,753 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Modifying the Geometry</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img1/jfy.jpg" width="103" height="34" /></div>
+        <div><p>JFY Bend Online Help</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Welcome to JFY Core</a></li>
+    <li><button class="tree blank"></button><a href="../index2.html">Bend your limits with JFY</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../intro/index.html">Introduction</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../intro/install.html">Installing the Software</a></li>
+        <li><button class="tree blank"></button><a href="../intro/clarity.html">The User Interface</a></li>
+        <li><button class="tree blank"></button><a href="../intro/workflow.html">Part Workflow</a></li>
+        <li><button class="tree blank"></button><a href="../intro/database.html">The Machine Database</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../bend cam/index.html">Bend CAM</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../bend cam/createbendtech.html">Create Bend Solution</a></li>
+        <li><button class="tree blank"></button><a href="../bend cam/navigator.html">The Bend Navigator</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bend cam/editing/index.html">Editor Panels</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../bend cam/editing/editbend.html">Edit a Bend</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/editing/editmount.html">Edit a Tool Mount</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/editing/editsetup.html">Edit a Bend Setup</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/editing/editgauge.html">Edit the Back-Gauges</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/editing/editacb.html">Edit Angle Measurement</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bend cam/operations/index.html">Bend Operations</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../bend cam/operations/sequencing.html">Changing the Sequence</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/operations/viewsettings.html">View Settings</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/operations/recompute.html">Recomputing the Solution</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/operations/batchprocess.html">Batch processing</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bend cam/advanced/index.html">Advanced Workflow</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bend cam/advanced/preparation/index.html">Preparation of Bend Parts</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/preparinga2ddrawing.html">Preparing a 2D drawing</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/editingadrawing.html">Editing a Drawing</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/addbendinginformationastexttodxf.html">Add Bending Information as Text to DXF</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/measuringthesidedimension.html">Measuring and changing Outer Dimension</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/preparing3dmodels.html">Preparing 3D models</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/preparinganassembly.html">Preparing an Assembly</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/componentdetection.html">Component Detection</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/formdetection.html">Form Detection</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bend cam/advanced/tooling/index.html">Edit Tools</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/tooling/changingtoolmap.html">Changing Tool Map</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/tooling/toolpriority.html">Tool Priority</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/tooling/creatingatool.html">Creating a Tool</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../bend cam/advanced/usingbenddeductions.html">Using Bend Deductions</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/advanced/miscellaneous.html">Comment Section in Bend Panel</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/advanced/tonnage.html">Tools/Machine Tonnage Check</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/advanced/addingatoolstation.html">Adding a Tooling station</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bend cam/settings/index.html">Settings</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bend cam/settings/1 applicationsettings/index.html">Application Settings</a>
+              <ul class="hide">
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="../bend cam/settings/1 applicationsettings/2 bendcam/index.html">Bend CAM</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="../bend cam/settings/1 applicationsettings/2 bendcam/bendoutputs.html">Bend Outputs</a></li>
+                    <li><button class="tree blank"></button><a href="../bend cam/settings/1 applicationsettings/2 bendcam/bendview.html">Bend View</a></li>
+                    <li><button class="tree blank"></button><a href="../bend cam/settings/1 applicationsettings/2 bendcam/bendcell.html">Bend Cell</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bend cam/settings/2 databasesettings/index.html">Database Settings</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/materials.html">Materials</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/machines.html">Machines</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/bendtools.html">Bend Tools</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/benddeductions.html">Bend Deductions</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/bendgrippers.html">Bend grippers</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/forms-components.html">Forms/Components</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../bend cam/settings/bendsettings.html">Bend Settings</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/settings/machinedefaults.html">Machine Defaults</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../bcell/index.html">Robot Bend CAM</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../bcell/overview.html">Overview of Robotic Bending</a></li>
+        <li><button class="tree blank"></button><a href="../bcell/basic-steps.html">Basic Steps of Robotic Bending</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bcell/workflow/index.html">Workflow</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bcell/workflow/partpickup/index.html">Part Pickup</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bcell/workflow/partpickup/pickupfrompallet.html">Pickup from a Pallet</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/partpickup/pickupfromdispenser.html">Pickup from a Dispenser</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../bcell/workflow/insertionstrategy.html">Insertion Strategy</a></li>
+            <li><button class="tree blank"></button><a href="../bcell/workflow/bendingstrategy.html">Bending Strategy</a></li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bcell/workflow/regripping/index.html">Regripping (RG) Stations</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bcell/workflow/regripping/regripstations.html">Re-Grip Stations</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/regripping/regrip-methods.html">Methods of Regripping</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/regripping/adding-regrip.html">Adding ReGrip</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/regripping/modify-regrip.html">Modify ReGrip Position</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/regripping/remove-regrip.html">Remove ReGripping</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/regripping/regrip-with-jaw-gripper.html">Regrip with a Jaw Gripper</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/regripping/gripper-panelandsuction-panel.html">Gripper Panel & Suction Panel</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../bcell/workflow/extractionstrategy.html">Extraction Strategy</a></li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bcell/workflow/partdeposit/index.html">Part Deposit</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bcell/workflow/partdeposit/adaptpartdeposit.html">Adapt Part Deposit</a></li>
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="../bcell/workflow/partdeposit/adding-parts-stacks/index.html">Adding Parts & Stacks</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="../bcell/workflow/partdeposit/adding-parts-stacks/depositpanel.html">Deposit Panel</a></li>
+                    <li><button class="tree blank"></button><a href="../bcell/workflow/partdeposit/adding-parts-stacks/separator.html">Add Separator Sheets</a></li>
+                    <li><button class="tree blank"></button><a href="../bcell/workflow/partdeposit/adding-parts-stacks/lockpartrest.html">Lock Part-Rest</a></li>
+                    <li><button class="tree blank"></button><a href="../bcell/workflow/partdeposit/adding-parts-stacks/repeatgridfield.html">Repeat Grid Field</a></li>
+                    <li><button class="tree blank"></button><a href="../bcell/workflow/partdeposit/adding-parts-stacks/stackdeposit.html">Deposit Sequence</a></li>
+                  </ul>
+                </li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/partdeposit/deposit-pattern-types.html">Deposit Pattern Types</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bcell/workflow/waypoints/index.html">Waypoints</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bcell/workflow/waypoints/adaptwaypoints.html">Adapt WayPoints</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/waypoints/displaywaypoints.html">Display Waypoints</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/waypoints/simulatewaypoints.html">Simulate Waypoints</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/waypoints/modifywaypoints.html">Modify WayPoints</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/workflow/waypoints/propertiesofwaypoints.html">Properties of Waypoints</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bcell/advanced topics/index.html">Advanced Topics</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bcell/advanced topics/cellconfig/index.html">Cell Configuration</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bcell/advanced topics/cellconfig/tracksetup.html">Track Setup</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/advanced topics/cellconfig/gripperinventory.html">Gripper Inventory</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/advanced topics/cellconfig/bendcellsettings.html">BendCell settings</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bcell/advanced topics/configure-a-gripper/index.html">Gripper Configuration</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bcell/advanced topics/configure-a-gripper/createeditagripper.html">Create/ Edit a Gripper</a></li>
+                <li><button class="tree blank"></button><a href="../bcell/advanced topics/configure-a-gripper/importgripper.html">Import Gripper from DXF</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bcell/troubleshooting/index.html">Troubleshooting Bend Errors</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../bcell/troubleshooting/part-pickup.html">Part Pickup Error</a></li>
+            <li><button class="tree blank"></button><a href="../bcell/troubleshooting/collisions-with-machine.html">Collisions with Machine</a></li>
+            <li><button class="tree blank"></button><a href="../bcell/troubleshooting/overtravel-of-axis.html">Overtravel of Axis</a></li>
+            <li><button class="tree blank"></button><a href="../bcell/troubleshooting/modification-of-waypoints.html">Modifications of Waypoints</a></li>
+            <li><button class="tree blank"></button><a href="../bcell/troubleshooting/collision-while-insertion-extraction.html">Collisions while Insertion and Extraction</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="index.html">CAD</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="2dimport.html">2-D Import</a></li>
+        <li><button class="tree blank"></button><a href="3dimport.html">3-D Import</a></li>
+        <li><button class="tree blank"></button><a class="active" href="sketch.html">Modifying the Geometry</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../report/index.html">Reports</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../report/designer.html">Report Designer</a></li>
+        <li><button class="tree blank"></button><a href="../report/fields.html">Fields, Pictures and Tables</a></li>
+        <li><button class="tree blank"></button><a href="../report/bands.html">Bands (sub-reports)</a></li>
+        <li><button class="tree blank"></button><a href="../report/labels.html">Labels, Bitmaps and Shapes</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../appendix/index.html">Appendix</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../appendix/3dformats.html">Supported 3D Formats</a></li>
+        <li><button class="tree blank"></button><a href="../appendix/bseparatordxf.html">Separator Sheet DXF</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html">CAD</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="sketch.html">Modifying the Geometry</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Modifying the Geometry</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Flux Bend you have a powerful sketch 2D editor to modify, clean up or add to your geometry. Use Shortcut key <kbd>S</kbd> to get into the sketch mode. The editor displays the part in unfold view.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/unfold2d.png" alt="image" width="528" height="243">
+</div>
+</div>
+<div class="paragraph">
+<p>In the developed view, click <strong>Sketch</strong> icon <span class="image"><img src="img/pencil.png" alt="Sketch" width="16"></span> or press Shortcut key <kbd>S</kbd>.</p>
+</div>
+<div class="paragraph">
+<p>A menu opens with various icons for processing the unfolding:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/movepanel.png" alt="movepanel">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sketch_panel">Sketch Panel</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Icon</th>
+<th class="tableblock halign-left valign-top">Symbol</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/pick.png" alt="pick" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select objects, lines, entries etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/line.png" alt="line" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Line</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketch a line</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/lines.png" alt="lines" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connected line</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches any number of lines</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/parallel.png" alt="parallel" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parallel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a parallel to a line</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/lineperpendicular.png" alt="lineperpendicular" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Normal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a tangent to a curve</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/bendline.png" alt="bendline" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bending</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a normal line to a line</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/arc.png" alt="arc" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Center-point arc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketch a bending line</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/arc2p.png" alt="arc2p" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2-point arc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches an arc from a centre point, start point and end point</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/arc3p.png" alt="arc3p" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-point arc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a circular arc through two defined points (start and end point)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/arctangent.png" alt="arctangent" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tangential arc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches an arc which is tangential to the sketch elements</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/rect.png" alt="rect" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rectangle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a rectangle</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/rectcenter.png" alt="rectcenter" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Centre-Point Rectangle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a rectangle from the centre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/circle.png" alt="circle" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Circle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a circle. Select the centre point of the circle and drag the
+cursor to define the radius or enter a value for the radius</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/circle2p.png" alt="circle2p" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2-Point Circle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a circle according to the circumference. Select a point on
+the circumference, then a second point and a third point.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/circle3p.png" alt="circle3p" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-Point Circle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a circle according to the circumference. Select a point on
+the circumference, then a second point and a third point.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/circle2t.png" alt="circle2t" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2-Tangent Circle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a circle with two tangents. Enter the circle diameter,
+then select the first tangent and then the second tangent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/circle3t.png" alt="circle3t" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3-Tangent Circle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a circle with three tangents. Enter the circle diameter,
+then select the first tangent, then the second tangent and then
+the third tangent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/polygonins.png" alt="polygonins" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inscribed Polygon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a circle with three tangents. Enter the circle diameter,
+then select the first tangent, then the second tangent and then
+the third tangent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/polygoncircum.png" alt="polygoncircum" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Circumscribed Polygon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a polygon. Specify the number of sides and select a
+centre point and the middle of a side edge</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/polygonedge.png" alt="polygonedge" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edge Polygon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sketches a polygon. Specify the number of sides and define the
+start point and end point of a side.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/fillet.png" alt="fillet" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fillet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rounds the corner at the corner point of two sketch elements
+with an entered radius, whereby a tangential arc is created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/chamfer.png" alt="chamfer" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chamfer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a bevel on the corner of the intersection of two sketch
+elements</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/infillet.png" alt="infillet" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In-Fillet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trims the corner at the intersection of two sketch elements with
+an entered radius</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/cornerstep.png" alt="cornerstep" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Corner Step</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trims the corner at the intersection of two sketch elements with a
+rectangle. The size of the rectangle can be entered beforehand.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/edgerecess.png" alt="edgerecess" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edge Recess</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a rectangular free cut. You must enter corner distance,
+free cut depth and then select a corner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/edgeu.png" alt="edgeu" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edge U-Cut</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates an oblong-hole shaped free cut. You must enter corner
+distance, free cut width, free cut depth and then select a corner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/edgev.png" alt="edgev" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edge V-Cut</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a triangular free cut. You must enter corner distance, free
+cut width, free cut depth and then select a corner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/keyslot.png" alt="keyslot" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keyslot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a keyhole in a circle with the entered values.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/fillet3seg.png" alt="fillet3seg" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fillet 3-Segment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rounds three connected sketch elements</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/extend.png" alt="extend" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extend</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select the sketch element that is to be extended<br>
+<kbd>ctrl</kbd> Select boundary<br>
+<kbd>Shift</kbd> Connect<br>
+<kbd>Alt</kbd> Drag<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/trim.png" alt="trim" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trim</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select the sketch element that is to be trimmed<br>
+<kbd>Ctrl</kbd> Select boundary<br>
+<kbd>Shift</kbd> Delete element<br>
+<kbd>Alt</kbd> Delete polyline<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/join.png" alt="join" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Join</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to trim and join several separate polylines into one</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/offset.png" alt="offset" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset one or more sketch elements, sketched model edges, or
+model faces by a specified distance</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/move.png" alt="move" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Move</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select a sketch element with <kbd>ctrl</kbd> select a reference point and
+move the sketch element</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/rotate.png" alt="rotate" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rotate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select a sketch element with <kbd>ctrl</kbd> select a rotation centre point,
+then a start point and an end point to rotate the sketch element</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/scale.png" alt="scale" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select a sketch element with <kbd>ctrl</kbd> select a base point, then a
+start reference point and an end reference point to scale the sketch element</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/mirror.png" alt="mirror" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mirror</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select a sketch element with <kbd>ctrl</kbd> then the start of the mirror
+line and then the end of the mirror line to mirror the sketch
+element</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/rectarray.png" alt="rectarray" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rectangle Array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use linear patterns to create multiple referenced copies of one or
+more sketch elements that you can space at equal distances along
+one or two linear paths. Click on the linear pattern and enter the
+desired values</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/polararray.png" alt="polararray" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Polar Array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use circular patterns to create multiple referenced copies of one
+or more sketch elements that you can space at equal distances
+around an axis. Click on circular patterns and enter the desired
+values</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/union.png" alt="union" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Union</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select two or more closed sketched elements to combine surfaces
+with each other</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/intersection.png" alt="intersection" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intersection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select two or more closed sketch elements to generate a cutting
+area of selected elements</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/subtraction.png" alt="subtraction" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subtraction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select two or more closed sketch elements to trim the surface</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/copynotch.png" alt="copynotch" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Copy Notch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You can make multiple copies of a notch along an edge, using this
+tool. First, input the spacing between the copies, and the number
+of copies of the notch you want to make. Then, select the notch
+by clicking on the two-line segments that are adjacent to the
+notch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/deletenotch.png" alt="deletenotch" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete Notch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You can delete a notch at a corner, or along a line segment, using
+this tool. Click on the two-line segments that are adjacent to the
+notch, and the notch is removed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/mirrornotch.png" alt="mirrornotch" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mirror Notch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You can mirror a notch at a corner, or along a line segment, using
+this tool. Click on the two-line segments that are adjacent to the
+notch, and the notch is mirrored</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/spline.png" alt="spline" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To start a new spline, click on the start point and as you click on
+subsequent points, the spline will be created. If you want to close
+the spline, press the ALT key and then click</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/profile.png" alt="profile" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type in base length, flange height, thickness, flange angle, inner
+radius and press enter to create a profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/text.png" alt="text" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to draw text that will be marked on the part by the Laser
+machine. When you click this tool button, the input bar displays
+input boxes for the text, the size, and the rotation angle</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/truetype.png" alt="truetype" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TrueType Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to take the shapes of characters in any TrueType font and
+convert them into polylines. Laser tooling can then be applied on
+these polylines, and they can be cut. The first time this button is
+clicked, the Font dialog comes up, allowing you to choose the font
+to be used for the text</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/commonshape.png" alt="commonshape" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common Shape</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to create several common shapes and insert them into the
+drawing. When you click on this button, the Make Shape dialog
+appears allowing you to choose from the palette of common
+shapes listed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/dsimple.png" alt="dsimple" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select the first dimensioning point, then the second dimensioning
+point and position the dimensioning line</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/dbaseline.png" alt="dbaseline" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Baseline Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select the first dimensioning point, then the second dimensioning
+point and position the dimensioning line</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/dcontinue.png" alt="dcontinue" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Continue Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select the first dimensioning point, then the second dimensioning
+point, position the dimensioning line and select the next
+dimensioning point</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/dhorzordinate.png" alt="dhorzordinate" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Horizontal Ordinate Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ordinate dimensions are a set of dimensions that are measured
+from the ordinate zero in the drawing. Select a reference point
+and position the dimensioning</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/dvertordinate.png" alt="dvertordinate" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vertical Ordinate Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ordinate dimensions are a set of dimensions that are measured
+from the ordinate zero in the drawing. Select a reference point
+and position the dimensioning</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/dangular.png" alt="dangular" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angular Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a dimensioning for an angle. Select the first line and then
+the second line on which you want to dimension the angle</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/dradius.png" alt="dradius" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radius Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a dimensioning for a radius. Select the circle on which you
+want to dimension the radius. Dimension the diameter with
+<kbd>ctrl</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/dradius.png" alt="dradius" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Centre Point Radius Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a dimensioning with continuous leader for a radius. Select
+the circle on which you want to dimension the radius. Dimension
+the diameter with <kbd>ctrl</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/dcallout.png" alt="dcallout" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Callout Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use to add notes to the drawing in the form of callouts. To create
+a callout, type in the text to be displayed, click to indicate where
+the arrow should point, and click again to indicate where the text
+should be placed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="image"><img src="img/icons/dsegment.png" alt="dsegment" width="50%"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Segment Dimension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use to add dimensioning for straight line and curved segments.
+Click on the segment to be dimensioned and click again to
+position the dimension. Or hold down <kbd></kbd> and click on a
+segment to position the dimension automatically.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_sketch_panel">Sketch Panel</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="3dimport.html">3-D Import</a></span>
+  <span class="next"><a href="../report/index.html">Reports</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Jiangsu Jinfangyuan CNC Machine Co. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

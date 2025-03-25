@@ -1,0 +1,699 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Basic Steps of Robotic Bending</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img1/jfy.jpg" width="103" height="34" /></div>
+        <div><p>JFY Bend Online Help</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+  <ul>
+    <li><button class="tree blank"></button><a href="../index.html">Welcome to JFY Core</a></li>
+    <li><button class="tree blank"></button><a href="../index2.html">Bend your limits with JFY</a></li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../intro/index.html">Introduction</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../intro/install.html">Installing the Software</a></li>
+        <li><button class="tree blank"></button><a href="../intro/clarity.html">The User Interface</a></li>
+        <li><button class="tree blank"></button><a href="../intro/workflow.html">Part Workflow</a></li>
+        <li><button class="tree blank"></button><a href="../intro/database.html">The Machine Database</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../bend cam/index.html">Bend CAM</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../bend cam/createbendtech.html">Create Bend Solution</a></li>
+        <li><button class="tree blank"></button><a href="../bend cam/navigator.html">The Bend Navigator</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bend cam/editing/index.html">Editor Panels</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../bend cam/editing/editbend.html">Edit a Bend</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/editing/editmount.html">Edit a Tool Mount</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/editing/editsetup.html">Edit a Bend Setup</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/editing/editgauge.html">Edit the Back-Gauges</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/editing/editacb.html">Edit Angle Measurement</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bend cam/operations/index.html">Bend Operations</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="../bend cam/operations/sequencing.html">Changing the Sequence</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/operations/viewsettings.html">View Settings</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/operations/recompute.html">Recomputing the Solution</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/operations/batchprocess.html">Batch processing</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bend cam/advanced/index.html">Advanced Workflow</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bend cam/advanced/preparation/index.html">Preparation of Bend Parts</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/preparinga2ddrawing.html">Preparing a 2D drawing</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/editingadrawing.html">Editing a Drawing</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/addbendinginformationastexttodxf.html">Add Bending Information as Text to DXF</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/measuringthesidedimension.html">Measuring and changing Outer Dimension</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/preparing3dmodels.html">Preparing 3D models</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/preparinganassembly.html">Preparing an Assembly</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/componentdetection.html">Component Detection</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/preparation/formdetection.html">Form Detection</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bend cam/advanced/tooling/index.html">Edit Tools</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/tooling/changingtoolmap.html">Changing Tool Map</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/tooling/toolpriority.html">Tool Priority</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/advanced/tooling/creatingatool.html">Creating a Tool</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../bend cam/advanced/usingbenddeductions.html">Using Bend Deductions</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/advanced/miscellaneous.html">Comment Section in Bend Panel</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/advanced/tonnage.html">Tools/Machine Tonnage Check</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/advanced/addingatoolstation.html">Adding a Tooling station</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="../bend cam/settings/index.html">Settings</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bend cam/settings/1 applicationsettings/index.html">Application Settings</a>
+              <ul class="hide">
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="../bend cam/settings/1 applicationsettings/2 bendcam/index.html">Bend CAM</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="../bend cam/settings/1 applicationsettings/2 bendcam/bendoutputs.html">Bend Outputs</a></li>
+                    <li><button class="tree blank"></button><a href="../bend cam/settings/1 applicationsettings/2 bendcam/bendview.html">Bend View</a></li>
+                    <li><button class="tree blank"></button><a href="../bend cam/settings/1 applicationsettings/2 bendcam/bendcell.html">Bend Cell</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="../bend cam/settings/2 databasesettings/index.html">Database Settings</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/materials.html">Materials</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/machines.html">Machines</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/bendtools.html">Bend Tools</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/benddeductions.html">Bend Deductions</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/bendgrippers.html">Bend grippers</a></li>
+                <li><button class="tree blank"></button><a href="../bend cam/settings/2 databasesettings/forms-components.html">Forms/Components</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="../bend cam/settings/bendsettings.html">Bend Settings</a></li>
+            <li><button class="tree blank"></button><a href="../bend cam/settings/machinedefaults.html">Machine Defaults</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree open"></button>
+      <a href="index.html">Robot Bend CAM</a>
+      <ul>
+        <li><button class="tree blank"></button><a href="overview.html">Overview of Robotic Bending</a></li>
+        <li><button class="tree blank"></button><a class="active" href="basic-steps.html">Basic Steps of Robotic Bending</a></li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="workflow/index.html">Workflow</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="workflow/partpickup/index.html">Part Pickup</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="workflow/partpickup/pickupfrompallet.html">Pickup from a Pallet</a></li>
+                <li><button class="tree blank"></button><a href="workflow/partpickup/pickupfromdispenser.html">Pickup from a Dispenser</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="workflow/insertionstrategy.html">Insertion Strategy</a></li>
+            <li><button class="tree blank"></button><a href="workflow/bendingstrategy.html">Bending Strategy</a></li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="workflow/regripping/index.html">Regripping (RG) Stations</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="workflow/regripping/regripstations.html">Re-Grip Stations</a></li>
+                <li><button class="tree blank"></button><a href="workflow/regripping/regrip-methods.html">Methods of Regripping</a></li>
+                <li><button class="tree blank"></button><a href="workflow/regripping/adding-regrip.html">Adding ReGrip</a></li>
+                <li><button class="tree blank"></button><a href="workflow/regripping/modify-regrip.html">Modify ReGrip Position</a></li>
+                <li><button class="tree blank"></button><a href="workflow/regripping/remove-regrip.html">Remove ReGripping</a></li>
+                <li><button class="tree blank"></button><a href="workflow/regripping/regrip-with-jaw-gripper.html">Regrip with a Jaw Gripper</a></li>
+                <li><button class="tree blank"></button><a href="workflow/regripping/gripper-panelandsuction-panel.html">Gripper Panel & Suction Panel</a></li>
+              </ul>
+            </li>
+            <li><button class="tree blank"></button><a href="workflow/extractionstrategy.html">Extraction Strategy</a></li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="workflow/partdeposit/index.html">Part Deposit</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="workflow/partdeposit/adaptpartdeposit.html">Adapt Part Deposit</a></li>
+                <li>
+                  <button class="tree closed"></button>
+                  <a href="workflow/partdeposit/adding-parts-stacks/index.html">Adding Parts & Stacks</a>
+                  <ul class="hide">
+                    <li><button class="tree blank"></button><a href="workflow/partdeposit/adding-parts-stacks/depositpanel.html">Deposit Panel</a></li>
+                    <li><button class="tree blank"></button><a href="workflow/partdeposit/adding-parts-stacks/separator.html">Add Separator Sheets</a></li>
+                    <li><button class="tree blank"></button><a href="workflow/partdeposit/adding-parts-stacks/lockpartrest.html">Lock Part-Rest</a></li>
+                    <li><button class="tree blank"></button><a href="workflow/partdeposit/adding-parts-stacks/repeatgridfield.html">Repeat Grid Field</a></li>
+                    <li><button class="tree blank"></button><a href="workflow/partdeposit/adding-parts-stacks/stackdeposit.html">Deposit Sequence</a></li>
+                  </ul>
+                </li>
+                <li><button class="tree blank"></button><a href="workflow/partdeposit/deposit-pattern-types.html">Deposit Pattern Types</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="workflow/waypoints/index.html">Waypoints</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="workflow/waypoints/adaptwaypoints.html">Adapt WayPoints</a></li>
+                <li><button class="tree blank"></button><a href="workflow/waypoints/displaywaypoints.html">Display Waypoints</a></li>
+                <li><button class="tree blank"></button><a href="workflow/waypoints/simulatewaypoints.html">Simulate Waypoints</a></li>
+                <li><button class="tree blank"></button><a href="workflow/waypoints/modifywaypoints.html">Modify WayPoints</a></li>
+                <li><button class="tree blank"></button><a href="workflow/waypoints/propertiesofwaypoints.html">Properties of Waypoints</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="advanced topics/index.html">Advanced Topics</a>
+          <ul class="hide">
+            <li>
+              <button class="tree closed"></button>
+              <a href="advanced topics/cellconfig/index.html">Cell Configuration</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="advanced topics/cellconfig/tracksetup.html">Track Setup</a></li>
+                <li><button class="tree blank"></button><a href="advanced topics/cellconfig/gripperinventory.html">Gripper Inventory</a></li>
+                <li><button class="tree blank"></button><a href="advanced topics/cellconfig/bendcellsettings.html">BendCell settings</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="tree closed"></button>
+              <a href="advanced topics/configure-a-gripper/index.html">Gripper Configuration</a>
+              <ul class="hide">
+                <li><button class="tree blank"></button><a href="advanced topics/configure-a-gripper/createeditagripper.html">Create/ Edit a Gripper</a></li>
+                <li><button class="tree blank"></button><a href="advanced topics/configure-a-gripper/importgripper.html">Import Gripper from DXF</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree closed"></button>
+          <a href="troubleshooting/index.html">Troubleshooting Bend Errors</a>
+          <ul class="hide">
+            <li><button class="tree blank"></button><a href="troubleshooting/part-pickup.html">Part Pickup Error</a></li>
+            <li><button class="tree blank"></button><a href="troubleshooting/collisions-with-machine.html">Collisions with Machine</a></li>
+            <li><button class="tree blank"></button><a href="troubleshooting/overtravel-of-axis.html">Overtravel of Axis</a></li>
+            <li><button class="tree blank"></button><a href="troubleshooting/modification-of-waypoints.html">Modifications of Waypoints</a></li>
+            <li><button class="tree blank"></button><a href="troubleshooting/collision-while-insertion-extraction.html">Collisions while Insertion and Extraction</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../cad/index.html">CAD</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../cad/2dimport.html">2-D Import</a></li>
+        <li><button class="tree blank"></button><a href="../cad/3dimport.html">3-D Import</a></li>
+        <li><button class="tree blank"></button><a href="../cad/sketch.html">Modifying the Geometry</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../report/index.html">Reports</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../report/designer.html">Report Designer</a></li>
+        <li><button class="tree blank"></button><a href="../report/fields.html">Fields, Pictures and Tables</a></li>
+        <li><button class="tree blank"></button><a href="../report/bands.html">Bands (sub-reports)</a></li>
+        <li><button class="tree blank"></button><a href="../report/labels.html">Labels, Bitmaps and Shapes</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="tree closed"></button>
+      <a href="../appendix/index.html">Appendix</a>
+      <ul class="hide">
+        <li><button class="tree blank"></button><a href="../appendix/3dformats.html">Supported 3D Formats</a></li>
+        <li><button class="tree blank"></button><a href="../appendix/bseparatordxf.html">Separator Sheet DXF</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+  <div>
+    <button>
+      <img src="../res/home.png">
+    </button>
+  </div>
+  <div>
+    <a href="index.html">Robot Bend CAM</a>
+  </div>
+  <div>/</div>
+  <div>
+    <a href="basic-steps.html">Basic Steps of Robotic Bending</a>
+  </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Basic Steps of Robotic Bending</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>We will discuss the basic steps in processing parts inside Robotic Bending machine.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_1_switching_to_3d_mode">STEP 1 - Switching to 3D Mode</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>If you have a part created in drawing mode using sketch option, you can view the part as shown below:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/wflowsketch1.png" alt="wflowsketch1" width="600">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can shift from the sketch mode to 3D mode by selecting the Workflow option.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the workflow icon in the command bar on the left.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/wflow2.png" alt="wflow2">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you have a 3-D sheet metal model open, you can switch to Bend CAM using the Workflow panel. Here is one way you could switch to the Bending mode.</p>
+</li>
+<li>
+<p>Click on the workflow icon in the command bar on the left.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/wflow3.png" alt="wflow3">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_2_switching_to_bend_tech">STEP 2 - Switching to Bend Tech</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <strong>Bend Tech</strong> option to select the machine to be used to process the Bend</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/wflow4.png" alt="wflow4">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the Bend Tech option in the workflow panel.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/wflow5.png" alt="wflow5">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click the close button <span class="icon"><i class="fa fa-close"></i></span> to close the workflow panel.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here is a faster way to do this, using the keyboard.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Press <kbd>W</kbd> to open the workflow panel.</p>
+</li>
+<li>
+<p>Press <kbd>B</kbd> to switch to the Bend Tech mode.</p>
+</li>
+<li>
+<p>Press <kbd>Esc</kbd> to close the workflow panel.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An even faster method can be used if you simply want to use the default Bending machine (the same one that was used the last time).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open a part.</p>
+</li>
+<li>
+<p>Press <kbd>B</kbd> to switch to the Bending mode.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_3_expanding_bend_navigator">STEP 3 - Expanding Bend Navigator</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/wflow6.png" alt="wflow6" width="70%">
+</div>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="img/wflow7.png" alt="wflow7" width="350">
+</div>
+</div>
+<div class="paragraph">
+<p>Hover over Bend navigator to see the <strong>simulation controls</strong> pops down.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>slider</strong> can be used to move the current bend through various phases of the
+bending operation (Part Pickup, insert part for bending, retract back-gauges move punch to pinch point, press with beam to bending position, Retract part, Regrip for better part handling, Deposit part etc). As the slider is moved, the tool-tip displays the current phase of bending, and various parts of the machine move in the simulation. If there are any collisions, those parts are colored red to clearly highlight the collision.</p>
+</li>
+<li>
+<p>The <strong>play controls</strong> near the left can be used to start the simulation, stop it,
+or rewind to the beginning.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can also press the <kbd>Spacebar</kbd> to
+  start or stop playing the Bend simulation.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="img/wflow8.png" alt="wflow8" width="250">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The dropdown arrow <span class="image"><img src="img/chevron.png" alt="Dropdown arrow" width="16"></span> can be used to expand the Bend navigator, displaying more detailed information about the errors and warnings for various bends.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can also press the <kbd>Z</kbd> key to expand/collapse the bend navigator display.
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pickup</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bend 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bend 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">R1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Regrip</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">D1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deposit 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">D2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deposit 2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_4_recompute_bend_solution">STEP 4 - Recompute Bend Solution</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/wflow10.png" alt="wflow10" width="270">
+</div>
+</div>
+<div class="paragraph">
+<p>When you press <kbd>B</kbd>, or use the workflow panel to compute a solution, Flux RoboBend calculates a bend solution using a set of default settings and parameters.</p>
+</div>
+<div class="paragraph">
+<p>#If you find No Errors in this image #after applying the Bend tooling, you can proceed to generate NC and Reports.</p>
+</div>
+<div class="paragraph">
+<p>If you have any error, you can use do a re-calculation of this solution using different settings by clicking on the <strong>recompute</strong> button on the command bar. Sometimes, this is also useful to complete the computation after you have interactively edited some tooling, or the sequence.</p>
+</div>
+<div class="imageblock right">
+<div class="content">
+<img src="img/wflow11.png" alt="wflow11" width="40">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can change the sequence and compute new tooling stations while
+keeping the sequence unchanged.</p>
+</li>
+<li>
+<p>You could change the tooling stations to compute a new sequence,
+or to align the part to the newly created stations.</p>
+</li>
+<li>
+<p>You can try the tooling operation with a different set of tools, or try
+using an already-created Setup.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_5_generating_nc_code_and_reports">STEP 5 - Generating NC Code and Reports</h2>
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="img/wflow9.png" alt="wflow9" width="300">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the workflow icon in the command bar on the left.</p>
+</li>
+<li>
+<p>Click on the Bend Tech process node in the workflow panel.</p>
+</li>
+<li>
+<p>Click on the Post-process option(see the highlight in the image).</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The NC-Code will get saved to the default location designated inside the Bend settings and also it will display a small message at the bottom of the screen.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/wflow14.png" alt="wflow14" width="600">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_saving_bend_outputs">Saving Bend Outputs</h3>
+<div class="imageblock right">
+<div class="content">
+<img src="img/wflow12.png" alt="wflow12" width="175">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the Bend Outputs option to save the Bend Report, which is used while bending. By default, the report is generated as a PDF file. The Bend report has information on the following topics:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Bend Report</p>
+</li>
+<li>
+<p>Tool Setup</p>
+</li>
+<li>
+<p>Bend Steps</p>
+</li>
+<li>
+<p>Regrip Station</p>
+</li>
+<li>
+<p>Gripper</p>
+</li>
+<li>
+<p>Pickup &amp; Deposit</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An example bend report is shown in the images below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/bendreport.png" alt="Bend Report" width="510"></span> <span class="image"><img src="img/bendsteps.png" alt="Bend Steps" width="510"></span> <span class="image"><img src="img/gripperinfo.png" alt="Gripper" width="510"></span> <span class="image"><img src="img/pickupdeposit.png" alt="Pickup" width="510"></span></p>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_step_1_switching_to_3d_mode">STEP 1 - Switching to 3D Mode</a>
+    </li>
+    <li level="1">
+      <a href="#_step_2_switching_to_bend_tech">STEP 2 - Switching to Bend Tech</a>
+    </li>
+    <li level="1">
+      <a href="#_step_3_expanding_bend_navigator">STEP 3 - Expanding Bend Navigator</a>
+    </li>
+    <li level="1">
+      <a href="#_step_4_recompute_bend_solution">STEP 4 - Recompute Bend Solution</a>
+    </li>
+    <li level="1">
+      <a href="#_step_5_generating_nc_code_and_reports">STEP 5 - Generating NC Code and Reports</a>
+    </li>
+    <li level="2">
+      <a href="#_saving_bend_outputs">Saving Bend Outputs</a>
+    </li>
+  </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+  <span class="prev"><a href="overview.html">Overview of Robotic Bending</a></span>
+  <span class="next"><a href="workflow/index.html">Workflow</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2025 by Jiangsu Jinfangyuan CNC Machine Co. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>
